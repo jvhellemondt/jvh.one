@@ -26,7 +26,7 @@ module.exports = {
         user: 'jvhellemondt',
         url: '//gitlab.com/jvhellemondt',
         editBlogUrl:
-          '//github.com/jvhellemondt/jvh.one/-/tree/main/content/posts/'
+          '//github.com/jvhellemondt/jvh.one/tree/main/content/posts'
       }
     }
   },
