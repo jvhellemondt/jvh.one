@@ -1,0 +1,34 @@
+{
+  "name": "jvh.vue",
+  "private": true,
+  "homepage": "https://jvh.one",
+  "scripts": {
+    "build": "gridsome build && mkdir -p dist && cp _redirects ./dist/_redirects",
+    "dev": "gridsome develop",
+    "explore": "gridsome explore",
+    "lint": "vue-cli-service lint",
+    "short": "netlify-shortener"
+  },
+  "dependencies": {
+    "@gridsome/plugin-google-analytics": "^0.1.0",
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.6.4",
+    "@gridsome/vue-remark": "^0.2.6",
+    "gridsome": "0.7.23",
+    "gridsome-plugin-remark-twitter": "^0.2.1",
+    "marked": "^1.2.3"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/vue-fontawesome": "^2.0.2",
+    "@vue/cli-plugin-eslint": "^4.5.4",
+    "@vue/cli-service": "^4.5.4",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.7.0",
+    "eslint-plugin-vue": "^7.4.0",
+    "netlify-shortener": "^2.3.0",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.0"
+  }
+}
