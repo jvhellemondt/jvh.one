@@ -52,10 +52,31 @@ Wanneer Git beschikbaar is op het systeem, ga dan naar de terminal van jouw syst
 
 <img src="./assets/GNOME-terminal-icon.png" width="100" >
 
-Ga naar werkmap waarin jouw applicatie staat en voer de volgende commando's uit:
+Ga (in powershell of terminal) naar werkmap waarin jouw applicatie staat en voer de volgende commando's uit:
+
+**De commit geschiedenis van je vorige repository blijft aanwezig!**
 
 ```bash
+git remote rm origin
 git remote add origin https://github.com/<JOUW GITHUB NAAM HIER>/<JOUW REPOSITORY NAAM HIER>.git
 git branch -M main
 git push -u origin main
 ```
+
+Ga nu naar GitHub en aanschouw jouw nieuwe repository mét jouw applicatie codebase.
+<br>
+<br>
+<br>
+Bedankt voor het lezen! Ik snap dat je dit niet vaak zal doen, maar mocht het toch eens voorkomen, dan weet je nu hoe.
+
+Mocht je vragen hebben, dan mag je die mij natuurlijk stellen! Je kunt ze stellen door een e-mail te sturen naar [me@jvh.one](mailto:me@jvh.one) of door te reageren op deze Tweet: 
+
+Ga nu naar GitHub en aanschouw jouw nieuwe repository mét jouw applicatie codebase.
+<br>
+<br>
+<br>
+Bedankt voor het lezen! Ik snap dat je dit niet vaak zal doen, maar mocht het toch eens voorkomen, dan weet je nu hoe.
+
+Mocht je vragen hebben, dan mag je die mij natuurlijk stellen! Je kunt ze stellen door een e-mail te sturen naar [me@jvh.one](mailto:me@jvh.one) of door te reageren op deze Tweet: 
+
+https://twitter.com/jvhellemondt/status/1356636404403601409?s=20
