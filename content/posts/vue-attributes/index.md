@@ -58,7 +58,7 @@ mijn [JTextField component](/props-voor-gevorderde-attribute-inheritance#compone
 
 <script>
 export default {
-  name: 'JTextFieldInheritAttrs',
+  name: 'JTextField',
   inheritAttrs: false,
   props: {
     label: {
@@ -94,7 +94,7 @@ export default {
 </style>
 ```
 
-Het is een [Single File (Vue) Component](/single-file-components) met twee props, `label` (vereist) en `value`. Dit zijn ook meteen twee attributen van JTextField (naast de standaard HTML attributen die gelden voor het input-element -- waarom? Daar vertel ik over in [props voor gevorderden, attribute inheritance](/props-voor-gevorderde-attribute-inheritance)) Wanneer
+Het is een [Single File (Vue) Component](/single-file-components) met twee props, `label` (vereist) en `value`. Dit zijn ook meteen twee attributen van JTextField (naast de standaard HTML attributen die gelden voor het input-element -- waarom? Daar vertel ik over in [props voor gevorderden, attribute inheritance](/props-voor-gevorderde-attribute-inheritance)). Wanneer
 we dit component in andere componenten zouden gebruiken, dan kan dat door de component op te nemen in de Vue
 template (`<template>...</template>`),
 bijvoorbeeld: `<JTextField label="Voornaam" placeholder="Vul hier uw voornaam in" />`.

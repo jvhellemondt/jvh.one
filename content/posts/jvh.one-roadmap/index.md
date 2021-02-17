@@ -1,7 +1,7 @@
 ---
 title: De roadmap, wat staat er op de planning?
 date: 2020-08-19
-published: true
+published: false
 tags: ['Roadmap', 'TODO']
 canonical_url: false
 description: 'Een opsomming van de op dit moment geplande onderwerpen, waar ik over ga schrijven.'
