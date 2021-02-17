@@ -60,9 +60,17 @@ module.exports = {
               omitScript: true
             }
           ]
-        ],
-      },
+        ]
+      }
     },
+{
+    use: 'gridsome-plugin-gtag',
+    options: {
+        config: {
+            id: 'G-WWQQHYCEEF',
+        },
+    },
+},
   ],
 
   transformers: {

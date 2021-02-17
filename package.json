@@ -15,6 +15,7 @@
     "@gridsome/transformer-remark": "^0.6.4",
     "@gridsome/vue-remark": "^0.2.6",
     "gridsome": "0.7.23",
+    "gridsome-plugin-gtag": "^0.1.10",
     "gridsome-plugin-remark-twitter": "^0.2.1",
     "marked": "^1.2.3"
   },
