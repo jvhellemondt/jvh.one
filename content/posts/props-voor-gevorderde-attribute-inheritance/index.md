@@ -9,6 +9,7 @@ canonical_url: false
 description: 'De optie inheritAttrs en de $attrs eigenschap. Hoe, wanneer en waarom gebruiken?'
 cover_image: './assets/images/crissy-jarvis-gdL-UZfnD3I-unsplash.jpg' 
 cover_credit: '© [Crissy Jarvis](https://unsplash.com/photos/gdL-UZfnD3I)'
+tweet: '1355859613896355841'
 [format:on]: <> (@formatter:on)
 ---
 
@@ -367,7 +368,3 @@ volgende en je ziet in de html-code dat het `style`-attribute geërfd is door he
 <br>
 <br>
 Bedankt voor het lezen! Ik hoop dat je nu weet waarvoor en wanneer je `$attrs` en `inheritAttrs` kan gebruiken. Ik gebruik dit regelmatig, en het maakt mijn code vaak een stuk compacter en meer clean.
-
-Mocht je vragen hebben, dan mag je die mij natuurlijk stellen! Je kunt ze stellen door een e-mail te sturen naar [me@jvh.one](mailto:me@jvh.one) of door te reageren op deze Tweet: 
-
-https://twitter.com/jvhellemondt/status/1355859613896355841

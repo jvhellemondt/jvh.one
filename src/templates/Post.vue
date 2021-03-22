@@ -24,13 +24,14 @@
         <VueRemarkContent/>
       </div>
 
-      <div class="post__content">
+      <div class="post__content" style="margin-top: 16px">
         Mocht je vragen hebben, dan mag je die mij natuurlijk stellen! Je kunt ze stellen door een e-mail te sturen naar
         <a href="mailto:me@jvh.one">me@jvh.one</a>
         <span v-if="$page.post.tweet"> of door te reageren op deze Tweet:</span>
         <Tweet v-if="$page.post.tweet"
                :id="$page.post.tweet"
-               :options="{ hideTread: false, hideMedia: false, align: 'center', omitScript: true }"/>
+               :options="{ hideTread: false, hideMedia: false, align: 'center', omitScript: true }"
+               style="margin-top: 12px; margin-bottom: 12px"/>
       </div>
       <div class="post__footer">
         <PostTags :post="$page.post"/>

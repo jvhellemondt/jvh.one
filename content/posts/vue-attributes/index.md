@@ -9,6 +9,7 @@ canonical_url: false
 description: 'Attributes lijken verdacht veel op props. Alleen is het eigenlijk andersom. Een prop is een attribute! En het zijn de bouwstenen die onze componenten herbruikbaar maken en ze zijn cruciaal voor de vorming van componenten.'
 cover_image: './assets/dan-burton-l6jWD4AZIf0-unsplash.jpg' 
 cover_credit: '© [Dan Burton](https://unsplash.com/@single_lens_reflex)'
+tweet: '1356575555576094720'
 [format:on]: <> (@formatter:on)
 ---
 import JTextField from './components/JTextField.vue'
@@ -110,7 +111,3 @@ Je ziet dat je door een simpele wijziging in de attributen, de component gemakke
 <br>
 <br>
 Bedankt voor het lezen! Hopelijk schept dit duidelijkheid over de attributen/props die je onbewust en vaak gebruikt wanneer je met Vue werkt.
-
-Mocht je vragen hebben, dan mag je die mij natuurlijk stellen! Je kunt ze stellen door een e-mail te sturen naar [me@jvh.one](mailto:me@jvh.one) of door te reageren op deze Tweet: 
-
-https://twitter.com/jvhellemondt/status/1356575555576094720?s=20

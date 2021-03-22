@@ -11,6 +11,7 @@ Angular etc..) hebben een vorm van componenten. Persoonlijk ben ik een fan van c
 dat ik eerder gebruikte code, niet nogmaals hoef te schrijven, of te kopiëren en te plakken.'
 cover_image: './assets/elena-koycheva-GUYCM0jhuSA-unsplash.jpg'
 cover_credit: '© [Elena Koycheva](https://unsplash.com/@lenneek)'
+tweet: '1356575555576094720'
 [format:on]: <> (@formatter:on)
 ---
 
@@ -201,7 +202,3 @@ En ook als `Single File Component`, ziet dit component er als volgt uit:
 <br>
 
 Bedankt voor het lezen! Ik hoop dat nu het verschil tussen `String Template Components` en `Single File Components` en de voordelen van `Single File Components`, duidelijk zijn.
-<br>
-<br>
-
-Mocht je vragen hebben, dan mag je die mij natuurlijk stellen! Je kunt ze stellen door een e-mail te sturen naar [me@jvh.one](mailto:me@jvh.one) of door te reageren op deze Tweet: 
