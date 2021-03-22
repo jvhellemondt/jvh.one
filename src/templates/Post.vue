@@ -25,14 +25,22 @@
       </div>
 
       <div class="post__content" style="margin-top: 16px">
-        Mocht je vragen hebben, dan mag je die mij natuurlijk stellen! Je kunt ze stellen door een e-mail te sturen naar
-        <a href="mailto:me@jvh.one">me@jvh.one</a>
-        <span v-if="$page.post.tweet"> of door te reageren op deze Tweet:</span>
+        <div style="margin-bottom: 16px">
+          <span style="padding-right: 12px">Was dit leerzaam voor jou? Help mij dan het schrijven voort te zetten!</span>
+          <KofiButton uid="M4M3414BK" text="Trakteer mij op een kop koffie" color="#bf792a"/>
+        </div>
+        <div style="margin-bottom: 16px">
+          Mocht je vragen hebben, dan mag je die mij natuurlijk stellen! Je kunt ze stellen door een e-mail te sturen
+          naar
+          <a href="mailto:me@jvh.one">me@jvh.one</a>
+          <span v-if="$page.post.tweet"> of door te reageren op deze Tweet:</span>
+        </div>
         <Tweet v-if="$page.post.tweet"
                :id="$page.post.tweet"
                :options="{ hideTread: false, hideMedia: false, align: 'center', omitScript: true }"
-               style="margin-top: 12px; margin-bottom: 12px"/>
+               style="margin-bottom: 16px"/>
       </div>
+
       <div class="post__footer">
         <PostTags :post="$page.post"/>
         <PostDirectEdit :post="$page.post"/>
@@ -53,11 +61,13 @@ import PostDirectEdit from '@/components/PostDirectEdit'
 import PostMeta from '@/components/PostMeta'
 import PostTags from '@/components/PostTags'
 import marked from 'marked'
+import KofiButton from 'vue-kofi'
 import { Tweet } from 'vue-tweet-embed'
 
 export default {
   components: {
     Tweet,
+    KofiButton,
     Author,
     PostMeta,
     PostTags,
@@ -122,6 +132,11 @@ export default {
           async: true,
           defer: true,
           id: 'twitter-wjs',
+          type: 'text/javascript'
+        }, {
+          src: 'https://ko-fi.com/widgets/widget_2.js',
+          async: true,
+          id: 'ko-fi-widgets',
           type: 'text/javascript'
         }
       ]
