@@ -28,6 +28,9 @@ module.exports = {
         user: 'jvhellemondt',
         url: '//gitlab.com/jvhellemondt'
       }
+    },
+    referral: {
+      one: '//one.me/nlazvrrf'
     }
   },
 

@@ -1,13 +1,11 @@
 <template>
   <div class="author">
-    <g-image
-      alt="Author image"
-      class="author__image"
-      src="@/assets/images/author.png"
-      width="180"
-      height="180"
-      blur="5"
-    />
+    <g-image alt="Author image"
+             class="author__image"
+             src="@/assets/images/author.png"
+             width="180"
+             height="180"
+             blur="5"/>
 
     <h1 v-if="showTitle" class="author__site-title">
       {{ `${$static.metadata.siteName} ${$static.metadata.social.twitter.id}` }}
@@ -22,20 +20,29 @@
       <a :href="$static.metadata.social.github.url">GitHub</a>
       <a :href="$static.metadata.social.gitlab.url">GitLab</a>
     </p>
+
+    <div class="author__links">
+      <div>Referrals:</div>
+      <a :href="$static.metadata.referral.one">14 euro korting op een .one domein</a>
+    </div>
+
   </div>
 </template>
 
 <static-query>
 query {
-  metadata {
-    siteName
-    siteDescription
-    social {
-      twitter { id, url}
-      github {url}
-      gitlab {url}
-    }
-  }
+metadata {
+siteName
+siteDescription
+social {
+twitter { id, url}
+github {url}
+gitlab {url}
+}
+referral {
+one
+}
+}
 }
 </static-query>
 
