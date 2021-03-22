@@ -3,11 +3,11 @@
 title: 'Migreren van Gitlab naar Github, simpel!'
 date: '2021-02-02' 
 published: true
-tags: ['Git', 'GitHub', 'GitLab', 'VCS', 'repository']
+tags: ['git', 'github', 'gitlab', 'vcs', 'repository', 'versie beheer']
 canonical_url: false 
 description: 'Het lijkt een flink taak, van GitLab heel je repository overzetten naar GitHub..'
 cover_image: './assets/barth-bailey-d2uHXWTkGn4-unsplash.jpg'
-cover_credit: '[Barth Bailey](https://unsplash.com/@7bbbailey)'
+cover_credit: '© [Barth Bailey](https://unsplash.com/@7bbbailey)'
 [format:on]: <> (@formatter:on)
 ---
 

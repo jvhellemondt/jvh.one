@@ -8,7 +8,7 @@ tags: ['Vue', 'Vue2', 'attribute', 'props', 'inheritance']
 canonical_url: false 
 description: 'Attributes lijken verdacht veel op props. Alleen is het eigenlijk andersom. Een prop is een attribute! En het zijn de bouwstenen die onze componenten herbruikbaar maken en ze zijn cruciaal voor de vorming van componenten.'
 cover_image: './assets/dan-burton-l6jWD4AZIf0-unsplash.jpg' 
-cover_credit: 'Omslag door [Dan Burton](https://unsplash.com/@single_lens_reflex)'
+cover_credit: '© [Dan Burton](https://unsplash.com/@single_lens_reflex)'
 [format:on]: <> (@formatter:on)
 ---
 import JTextField from './components/JTextField.vue'

@@ -4,11 +4,11 @@
 title: 'Props voor gevorderden, attribute inheritance'
 date: '2021-01-31' 
 published: true
-tags: ['Vue', 'Vue2','attribute', 'props', 'inheritance', 'inheritAttrs', '$attrs']
+tags: ['vue', 'vue2','attribute', 'props', 'inheritance', 'inheritAttrs', '$attrs']
 canonical_url: false 
 description: 'De optie inheritAttrs en de $attrs eigenschap. Hoe, wanneer en waarom gebruiken?'
 cover_image: './assets/images/crissy-jarvis-gdL-UZfnD3I-unsplash.jpg' 
-cover_credit: 'Omslag door [Crissy Jarvis](https://unsplash.com/photos/gdL-UZfnD3I)'
+cover_credit: '© [Crissy Jarvis](https://unsplash.com/photos/gdL-UZfnD3I)'
 [format:on]: <> (@formatter:on)
 ---
 
