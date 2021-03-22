@@ -3,7 +3,7 @@
 [format:off]: <> ( @formatter:off)
 title: 'Vue components'
 date: '2021-03-22'
-published: false
+published: true
 tags: ['vue', 'vue3', 'component', 'string template component', 'component options', 'single file component']
 canonical_url: false
 description: 'Componenten, je ontkomt er tegenwoordig niet meer aan. Alle grote Javascript-frameworks (Vue, Svelte, Ember, React,
@@ -11,7 +11,7 @@ Angular etc..) hebben een vorm van componenten. Persoonlijk ben ik een fan van c
 dat ik eerder gebruikte code, niet nogmaals hoef te schrijven, of te kopiëren en te plakken.'
 cover_image: './assets/elena-koycheva-GUYCM0jhuSA-unsplash.jpg'
 cover_credit: '© [Elena Koycheva](https://unsplash.com/@lenneek)'
-tweet: '1356575555576094720'
+tweet: '1374091858620649475'
 [format:on]: <> (@formatter:on)
 ---
 
