@@ -20,13 +20,13 @@ module.exports = {
       },
       github: {
         user: 'jvhellemondt',
-        url: '//github.com/jvhellemondt'
+        url: '//github.com/jvhellemondt',
+        editBlogUrl:
+          '//github.com/jvhellemondt/jvh.one/tree/main/content/posts'
       },
       gitlab: {
         user: 'jvhellemondt',
-        url: '//gitlab.com/jvhellemondt',
-        editBlogUrl:
-          '//github.com/jvhellemondt/jvh.one/tree/main/content/posts'
+        url: '//gitlab.com/jvhellemondt'
       }
     }
   },

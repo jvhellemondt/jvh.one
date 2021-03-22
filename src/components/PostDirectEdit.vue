@@ -1,40 +1,39 @@
 <template>
   <div class="post-edit">
-    <div>
+    <span>
       Direct aanpassen via
-      <a
-        :href="$static.metadata.social.gitlab.editBlogUrl + post.fileInfo.path"
-      >
-        <font-awesome :icon="['fab', 'gitlab']" /> GitLab
+      <a :href="$static.metadata.social.github.editBlogUrl + post.fileInfo.path">
+        <font-awesome :icon="['fab', 'github']"/>
+        GitHub
       </a>
-    </div>
+    </span>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['post'],
+  props: ['post']
 }
 </script>
 
 <static-query>
 query {
-  metadata {
-    social {
-      gitlab {editBlogUrl}
-    }
-  }
+metadata {
+social {
+github {editBlogUrl}
+}
+}
 }
 </static-query>
 
 <style lang="scss" scoped>
 .post-edit {
-  display: flex;
+  display:         flex;
   justify-content: flex-end;
-  align-items: center;
-  text-align: left;
-  font-size: 0.5em;
-  opacity: 0.8;
-  margin-top: 24px;
+  align-items:     center;
+  text-align:      left;
+  font-size:       0.5em;
+  opacity:         0.8;
+  margin-top:      24px;
 }
 </style>
