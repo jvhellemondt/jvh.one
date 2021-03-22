@@ -7,7 +7,7 @@
 module.exports = {
   siteName: 'jvh.one',
   siteDescription:
-    'Your endpoint for modern web development! En dan in het Nederlands.',
+    'Nederlandse web developer met een voorliefde voor frontend development. Ik schrijf over mijn ideeën en hetgeen dat ik geleerd heb. Allemaal in het Nederlands.',
   metadata: {
     author: {
       firstName: 'Jens',
