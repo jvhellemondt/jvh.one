@@ -53,17 +53,6 @@ module.exports = {
             create: true
           }
         },
-        plugins: [
-          [
-            'gridsome-plugin-remark-twitter',
-            {
-              hideTread: false,
-              hideMedia: false,
-              align: 'center',
-              omitScript: true
-            }
-          ]
-        ]
       }
     },
 {

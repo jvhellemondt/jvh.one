@@ -25,7 +25,8 @@ query {
         description
         cover_image (width: 770, height: 380, blur: 10)
         cover_credit
-        path
+tweet
+path
         tags {
           id
           title
