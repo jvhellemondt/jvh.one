@@ -1,7 +1,7 @@
 <template>
   <div class="post-meta">
     <div class="post-meta__left">
-      <div v-if="post.publised">Gepubliceerd op {{ post.date }}</div>
+      <div v-if="post.published">Gepubliceerd op {{ post.date }}</div>
       <div v-else>Verwachte publicatie datum {{ post.date }}</div>
     </div>
     <template v-if="post.timeToRead">
