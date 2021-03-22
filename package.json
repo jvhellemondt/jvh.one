@@ -17,7 +17,8 @@
     "gridsome": "0.7.23",
     "gridsome-plugin-gtag": "^0.1.10",
     "gridsome-plugin-remark-twitter": "^0.2.1",
-    "marked": "^1.2.3"
+    "marked": "^1.2.3",
+    "vue-tweet-embed": "^2.4.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
