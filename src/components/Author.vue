@@ -22,7 +22,7 @@
     </p>
 
     <div class="author__links">
-      <div>Referrals:</div>
+      <div>Affiliates:</div>
       <a :href="$static.metadata.referral.one">14 euro korting op een .one domein</a>
     </div>
 
