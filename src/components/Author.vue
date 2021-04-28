@@ -18,7 +18,6 @@
     <p class="author__links">
       <a :href="$static.metadata.social.twitter.url">Volgen op Twitter</a>
       <a :href="$static.metadata.social.github.url">GitHub</a>
-      <a :href="$static.metadata.social.gitlab.url">GitLab</a>
     </p>
 
     <div class="author__links">
