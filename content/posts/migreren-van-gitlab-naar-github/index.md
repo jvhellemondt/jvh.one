@@ -5,7 +5,7 @@ date: '2021-02-02'
 published: true
 tags: ['git', 'github', 'gitlab', 'vcs', 'repository', 'versie beheer']
 canonical_url: false 
-description: 'Het lijkt een flink taak, van GitLab heel je repository overzetten naar GitHub..'
+description: 'Het lijkt een flinke taak, van GitLab, heel je repository overzetten naar GitHub..'
 cover_image: './assets/barth-bailey-d2uHXWTkGn4-unsplash.jpg'
 cover_credit: '© [Barth Bailey](https://unsplash.com/@7bbbailey)'
 tweet: '1356636404403601409'
