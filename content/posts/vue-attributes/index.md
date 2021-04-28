@@ -25,8 +25,8 @@ nou eigenlijk?*
 
 ## Attributen, waar ken ik dat van?
 
-Wanneer je met Vue werkt, dan kom je al snel in aanraking met [componenten](vue-components)
-. [Componenten](vue-components) hebben vaak attributen, net zoals HTML elementen.
+Wanneer je met Vue werkt, dan kom je al snel in aanraking met [componenten](/vue-components)
+. [Componenten](/vue-components) hebben vaak attributen, net zoals HTML elementen.
 
 Neem bijvoorbeeld het anchor-element (`<a></a>`). Bij een anchor (een link), dient een `href` opgegeven te worden om het
 bruikbaar te maken (`<a href="https://www.jvh.one">Ga naar jvh.one!</a>`).
@@ -95,8 +95,11 @@ export default {
 </style>
 ```
 
-Het is een [Single File (Vue) Component](/single-file-components) met twee props, `label` (vereist) en `value`. Dit zijn ook meteen twee attributen van JTextField (naast de standaard HTML attributen die gelden voor het input-element -- waarom? Daar vertel ik over in [props voor gevorderden, attribute inheritance](/props-voor-gevorderde-attribute-inheritance)). Wanneer
-we dit component in andere componenten zouden gebruiken, dan kan dat door de component op te nemen in de Vue
+Het is een [Single File (Vue) Component](/vue-components#single-file-components) met twee props, `label` (vereist)
+en `value`. Dit zijn ook meteen twee attributen van JTextField (naast de standaard HTML attributen die gelden voor het
+input-element -- waarom? Daar vertel ik over
+in [props voor gevorderden, attribute inheritance](/props-voor-gevorderde-attribute-inheritance)). Wanneer we dit
+component in andere componenten zouden gebruiken, dan kan dat door de component op te nemen in de Vue
 template (`<template>...</template>`),
 bijvoorbeeld: `<JTextField label="Voornaam" placeholder="Vul hier uw voornaam in" />`.
 

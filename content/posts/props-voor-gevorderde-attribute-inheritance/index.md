@@ -45,7 +45,7 @@ Ik zal de belangrijkste zaken toelichten. Ik ga er hierbij van uit dat je bekend
 
 ### The root element (of a component)
 
-Wat is *"the root element"* van [een (Vue) component](vue-components)?
+Wat is *"the root element"* van [een (Vue) component](/vue-components)?
 
 Tussen de template-tags (`<template>...</template>`), mag één element staan, met eventueel meerdere elementen als
 children. Doe je dit niet (zoals in het codevoorbeeld hieronder), dan krijg je de
@@ -102,7 +102,7 @@ met een div-element. De div, met class input-fields, binnen de template-tags, is
 
 ### The component’s options
 
-[Een (Vue) component](vue-components) kan op meerdere manieren opgezet worden. Dit doe je door de opties van de
+[Een (Vue) component](/vue-components) kan op meerdere manieren opgezet worden. Dit doe je door de opties van de
 component in te stellen. Deze opties stel je in, in de export van het script gedeelte. Enkele bekende opties zijn *name*
 , *data*, *props*, *computed*, *methods*. Er zijn er nog meer, maar die opties vallen buiten het onderwerp van deze
 blog. Het opzetten van de opties, ziet er doorgaans als volgt uit:
@@ -142,11 +142,11 @@ aan [the root element](#the-root-element-of-a-component), dit wordt **inherit at
 
 #### Props en non-props
 
-Om *props* en *non-props* toe te lichten, heb ik (met in het achterhoofd het [DRY principle](dry-principle)) van het
+Om *props* en *non-props* toe te lichten, heb ik (met in het achterhoofd het [DRY principle](/dry-principle)) van het
 code-voorbeeld bij [The root element (of a component)](#the-root-element-of-a-component)
-, [een los (Vue) component](vue-components) gemaakt, namelijk, **JTextField**. Dit is
-een [Single File Component](single-file-components) en dit component ziet er als volgt uit (inclusief de bijbehorende
-code):
+, [een los (Vue) component](/vue-components) gemaakt, namelijk, **JTextField**. Dit is
+een [Single File Component](/vue-components#single-file-components) en dit component ziet er als volgt uit (inclusief de
+bijbehorende code):
 
 ###### components/JTextField.vue
 
@@ -218,8 +218,8 @@ daarvoor hebben `$attrs` nodig.
 
 ### The $attrs instance property
 
-In [een (Vue) component](vue-components) is, binnen [the component options](#the-components-options) en binnen
-alle [data-bindings](#WIP) van de template, `$attrs` beschikbaar.
+In [een (Vue) component](/vue-components) is, binnen [the component options](#the-components-options) en binnen alle
+data-bindings van de template, `$attrs` beschikbaar.
 
 `$attrs` is een 'normaal' JavaScript object. Voor de volledigheid, hetzelfde geldt voor $props. Dat kun je zien door het
 te loggen (console.log) in de opties van een component (bijvoorbeeld in de *created* lifecycle).
