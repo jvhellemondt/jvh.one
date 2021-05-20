@@ -22,5 +22,6 @@ Een opsomming van de op dit moment geplande onderwerpen, waar ik over ga schrijv
 - BLOG: een domein registreren
 - BLOG: automatiseer alles! Ubuntu post install script
 - BLOG: mijn setup
+- BLOG: AWS
 
 https://twitter.com/jvhellemondt/status/1306155413612769280
