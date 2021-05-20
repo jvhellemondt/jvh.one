@@ -3,7 +3,7 @@
 [format:off]: <> ( @formatter:off)
 title: 'Map: de nieuwe array'
 date: '2021-04-30' 
-published: true
+published: false
 tags: ['Javascript', 'Vue', 'Array', 'map']
 canonical_url: false 
 description: ''
