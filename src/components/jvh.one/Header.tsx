@@ -48,7 +48,7 @@ export default class Header extends React.Component<Record<string, unknown>, ISt
       <StaticQuery
         query={ query }
         render={ data => {
-          const { siteMetadata: { title } } = data.site;
+          const { siteMetadata } = data.site;
           const isHome = (props: LinkGetProps): boolean => props.isCurrent
           return (
             <>
@@ -56,7 +56,7 @@ export default class Header extends React.Component<Record<string, unknown>, ISt
               <header className="header header__container">
                 {
                   !isHome && <div className="header header__left">
-                    <Link to={ "/" } getProps={ isHome }> &larr; { title } </Link>
+                    <Link to={ "/" } getProps={ isHome }> &larr; { siteMetadata.title } </Link>
                   </div>
                 }
                 
