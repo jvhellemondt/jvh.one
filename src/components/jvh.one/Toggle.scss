@@ -1,0 +1,32 @@
+.toggle-theme {
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  border: 0;
+  color: var(--body-color);
+  cursor: pointer;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(255, 255, 255, 0) 2px 2px;
+  transition: box-shadow 0.5s ease-in-out;
+
+  &:hover {
+    box-shadow: inset -2px 0 1px rgba(0, 25, 150, 0.8), 10px 0 10px rgba(0, 25, 150, 0.8);
+  }
+
+  &:focus:not(:hover) {
+    box-shadow: inset -2px 0 1px rgba(0, 25, 150, 0.4), 10px 0 5px rgba(0, 25, 150, 0.4) ;
+  }
+}
+
+body.dark .toggle-theme {
+  &:hover {
+    box-shadow: inset 2px 0 1px rgba(255, 255, 50, 0.8) ,-10px 0 10px rgba(255, 255, 50, 0.8) ;
+  }
+
+  &:focus:not(:hover) {
+    box-shadow: inset 2px 0 1px rgba(255, 255, 50, 0.4) ,-10px 0 5px rgba(255, 255, 50, 0.4) ;
+  }
+}

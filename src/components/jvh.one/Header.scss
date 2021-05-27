@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  align-items: center;
+
+  &__container {
+    justify-content: space-between;
+    min-height: var(--header-height);
+    padding: 0 calc(var(--space) / 2);
+    top: 0;
+    z-index: 10;
+
+  }
+
+  &__left {
+    flex-grow: 1;
+    justify-content: flex-start;
+
+  }
+
+  &__right {
+    flex-grow: 1;
+    justify-content: flex-end
+  }
+
+  @media screen and (min-width: 1300px) {
+    position: sticky;
+    width: 100%;
+  }
+}
