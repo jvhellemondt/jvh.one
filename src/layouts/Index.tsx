@@ -1,24 +1,21 @@
-import React, { PureComponent, ReactElement, ReactNode } from 'react'
+import React, {ReactElement, ReactNode} from 'react'
 import './index.scss'
 import Header from "../components/jvh.one/Header";
 
 interface IProps {
-  pageName: string,
-  children: ReactNode
+    pageName: string,
+    children: ReactNode
 }
 
-export default class Layout extends PureComponent<IProps> {
-  
-  render(): ReactElement {
-    const { children } = this.props
+const Layout = ({children}: IProps): ReactElement => {
     return (
-      <div id='app'>
-        <Header />
-        <main className={ 'main' }>
-          { children }
-        </main>
-      </div>
+        <div id='app'>
+            <Header/>
+            <main className={'main'}>
+                {children}
+            </main>
+        </div>
     )
-    
-  }
 }
+
+export default Layout
