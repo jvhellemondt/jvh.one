@@ -1,16 +1,13 @@
-import React from 'react'
-import Layout from '../layouts/Index'
+import React from 'react';
+import Layout from '../layouts/Index';
 
-const IndexPage = (): React.ReactElement => {
-    return (
-        <Layout pageName="Home">
-            <div>
-                <h1>Test</h1>
-                Hi
+const IndexPage = (): React.ReactElement => (
+  <Layout pageName="Home">
+    <div>
+      <h1>Test</h1>
+      Hi
+    </div>
+  </Layout>
+);
 
-            </div>
-        </Layout>
-    )
-}
-
-export default IndexPage
+export default IndexPage;

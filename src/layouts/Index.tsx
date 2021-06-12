@@ -1,21 +1,23 @@
-import React, {ReactElement, ReactNode} from 'react'
-import './index.scss'
-import Header from "../components/jvh.one/Header";
+import React, { ReactElement, ReactNode } from 'react';
+import './index.scss';
+import Header from '../components/jvh.one/Header';
 
 interface IProps {
-    pageName: string,
-    children: ReactNode
+  pageName: string
+  children: ReactNode
 }
 
-const Layout = ({children}: IProps): ReactElement => {
-    return (
-        <div id='app'>
-            <Header/>
-            <main className={'main'}>
-                {children}
-            </main>
-        </div>
-    )
-}
+const Layout = ({
+  pageName,
+  children,
+}: IProps): ReactElement => {
+  console.log(pageName);
+  return (
+    <div id="app">
+      <Header />
+      <main className="main">{children}</main>
+    </div>
+  );
+};
 
-export default Layout
+export default Layout;
