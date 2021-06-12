@@ -12,7 +12,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "lint": "tsc --noEmit && eslint --fix --quiet --no-error-on-unmatched-pattern src/**/*.{js,jsx,ts,tsx}"
+    "lint": "tsc --noEmit && eslint --fix --no-error-on-unmatched-pattern src/**/*.{js,jsx,ts,tsx}"
   },
   "husky": {
     "hooks": {
