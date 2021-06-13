@@ -1,21 +1,22 @@
 import React, { ReactElement, ReactNode } from 'react';
-import './index.scss';
+import * as style from './style.module.scss';
 import Header from '../components/jvh.one/Header';
+import { Main } from '../components/base/Template';
 
 interface IProps {
-  pageName: string
+  title: string
   children: ReactNode
 }
 
 const Layout = ({
-  pageName,
+  title,
   children,
 }: IProps): ReactElement => {
-  console.log(pageName);
+  console.log(title);
   return (
-    <div id="app">
+    <div className={style.app}>
       <Header />
-      <main className="main">{children}</main>
+      <Main>{children}</Main>
     </div>
   );
 };
