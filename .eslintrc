@@ -1,4 +1,13 @@
 {
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -7,17 +16,23 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "paths": ["src"],
-        "extensions": [".js", ".jsx", ".d.ts", ".ts", ".tsx"]
+        "paths": [
+          "src"
+        ],
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".d.ts",
+          ".ts",
+          ".tsx"
+        ]
       }
     }
   },
-  "parser": "@typescript-eslint/parser",
   "plugins": [
     "@typescript-eslint"
   ],
   "rules": {
-    "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": [
       "error"
     ],
@@ -27,6 +42,10 @@
     ],
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/ban-ts-comment": "off",
+
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
     "react/jsx-filename-extension": [
       2,
       {
@@ -38,6 +57,7 @@
         ]
       }
     ],
+
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -48,9 +68,10 @@
         "tsx": "never"
       }
     ],
+
     "comma-dangle": "off",
+
     "no-underscore-dangle": "off",
-    "@typescript-eslint/ban-ts-comment": "off",
-    "react/jsx-props-no-spreading": "off",
+    "no-use-before-define": "off"
   }
 }
