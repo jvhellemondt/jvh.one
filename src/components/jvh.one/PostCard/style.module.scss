@@ -1,6 +1,67 @@
 .post-card {
-  margin-bottom: var(--space);
   position: relative;
+  background-color: var(--bg-content-color);
+  max-width: var(--content-width);
+  margin: 0 auto var(--space);
+  padding: var(--space);
+  border-radius: var(--radius);
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, .02), 1px 1px 15px 0 rgba(0, 0, 0, .03);
+  transition: transform .3s, background-color .3s, box-shadow .6s;
 
+  &__header {
+    border-radius: var(--radius) var(--radius) 0 0;
+    margin: calc(var(--space) * -1) calc(var(--space) * -1) calc(var(--space) / 2);
+    overflow:      hidden;
+    position:      relative;
+    &:empty {
+      display: none;
+    }
+  }
+  &__credit {
+    color:        black;
+    margin-right: 8px;
+  }
+  &__credit_wrap {
+    background: rgba(0, 0, 0, 0.5);
+    color:      rgba(200, 200, 200, 0.87);
+    position:   absolute;
+    right:      0;
+    text-align: right;
+    top:        0;
+    width:      100%;
+  }
+  &__container {
 
+  }
+  &__content {
+
+  }
+  &__image {
+    min-width: 100%;
+  }
+  &__title {
+    margin-top: 0;
+  }
+  &:hover {
+    box-shadow: 1px 10px 30px 0 rgba(0, 0, 0, 0.1);
+    transform:  translateY(-5px);
+  }
+  &__tags {
+    position: relative;
+    z-index:  1;
+  }
+  &__link {
+    height:      100%;
+    left:        0;
+    opacity:     0;
+    overflow:    hidden;
+    position:    absolute;
+    text-indent: -9999px;
+    top:         0;
+    width:       100%;
+    z-index:     0;
+  }
 }
+
+
+
