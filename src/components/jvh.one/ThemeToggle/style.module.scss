@@ -19,14 +19,14 @@
   &:focus:not(:hover) {
     box-shadow: inset -2px 0 1px rgba(0, 25, 150, 0.4), 10px 0 5px rgba(0, 25, 150, 0.4) ;
   }
-}
 
-body.dark .toggle-theme {
-  &:hover {
-    box-shadow: inset 2px 0 1px rgba(255, 255, 50, 0.8) ,-10px 0 10px rgba(255, 255, 50, 0.8) ;
-  }
+  &--dark {
+    &:hover {
+      box-shadow: inset 2px 0 1px rgba(255, 255, 50, 0.8), -10px 0 10px rgba(255, 255, 50, 0.8);
+    }
 
-  &:focus:not(:hover) {
-    box-shadow: inset 2px 0 1px rgba(255, 255, 50, 0.4) ,-10px 0 5px rgba(255, 255, 50, 0.4) ;
+    &:focus:not(:hover) {
+      box-shadow: inset 2px 0 1px rgba(255, 255, 50, 0.4), -10px 0 5px rgba(255, 255, 50, 0.4);
+    }
   }
 }

@@ -3,7 +3,7 @@ import * as React from 'react';
 import { LinkGetProps } from 'reach__router';
 import { Helmet } from 'react-helmet';
 import { graphql, Link, StaticQuery } from 'gatsby';
-import Toggle from './Toggle';
+import ThemeToggle from './ThemeToggle';
 import './Header.scss';
 
 interface IState {
@@ -78,7 +78,7 @@ export default class Header extends React.Component<Record<string, unknown>, ISt
                 }
 
                 <div className="header header__right">
-                  <Toggle handleClick={this.handleThemeChange} dark={this.state.theme === 'dark'} />
+                  <ThemeToggle handleClick={this.handleThemeChange} dark={this.state.theme === 'dark'} />
                 </div>
               </header>
             </>
