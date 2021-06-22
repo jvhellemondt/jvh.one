@@ -1,0 +1,18 @@
+.post {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    margin-top: 1.6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .deck {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      display: inline-flex;
+    }
+  }
+}

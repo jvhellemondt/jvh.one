@@ -8,16 +8,16 @@
     padding: 0 calc(var(--space) / 2);
     top: 0;
     z-index: 10;
-
   }
 
   &__left {
+    display: flex;
     flex-grow: 1;
     justify-content: flex-start;
-
   }
 
   &__right {
+    display: flex;
     flex-grow: 1;
     justify-content: flex-end
   }

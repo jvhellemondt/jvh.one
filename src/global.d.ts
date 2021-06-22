@@ -10,3 +10,17 @@ add `--lib DOM` (via command line or tsconfig.json).
 */
 
 declare const __PATH_PREFIX__: string;
+
+type __setPreferredThemeFunction = {
+  (newTheme: string): void;
+}
+
+type __onThemeChangeFunction = {
+  (): void;
+}
+
+interface Window {
+  __setPreferredTheme: __setPreferredThemeFunction;
+  __theme: string;
+  __onThemeChange: __onThemeChangeFunction;
+}

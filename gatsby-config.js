@@ -9,28 +9,11 @@ module.exports = {
     },
   },
   plugins: [
-    'gatsby-plugin-sass',
-    'gatsby-plugin-image',
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: '262589136',
-      },
-    },
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        icon: 'src/images/icon.png',
-      },
-    },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images/',
+        path: `${__dirname}/src/images/`,
       },
       __key: 'images',
     },
@@ -38,24 +21,50 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: './src/pages/',
+        path: `${__dirname}/src/pages/`,
       },
       __key: 'pages',
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: `${__dirname}/content/posts/`,
         name: 'posts',
-        path: './content/posts/',
       },
-      __key: 'posts',
+    },
+    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        defaults: {
+          formats: ['auto', 'webp'],
+          placeholder: 'dominantColor',
+          quality: 25,
+          breakpoints: [750, 1020],
+          backgroundColor: 'transparent',
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
+      },
+    },
+    'gatsby-transformer-sharp',
+    'gatsby-transformer-remark',
+    'gatsby-plugin-sass',
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: '262589136',
+      },
     },
     {
-      resolve: 'gatsby-plugin-typescript',
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        isTSX: true, // defaults to false
-        jsxPragma: 'jsx', // defaults to "React"
-        allExtensions: true, // defaults to false
+        icon: 'src/images/icon.png',
       },
     },
   ],
