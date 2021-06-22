@@ -8,9 +8,7 @@ declare module '*.scss' {
 }
 
 declare module '*.svg' {
-  import { ReactHTMLElement, ReactSVGElement } from 'react';
-
-  const content: ReactHTMLElement<ReactSVGElement>;
+  const content: any;
   export default content;
 }
 
