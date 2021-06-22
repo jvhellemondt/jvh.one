@@ -2,11 +2,18 @@ module.exports = {
   siteMetadata: {
     title: 'jvh.one',
     author: 'Jens van Hellemondt',
-    description: 'Personal blog by Jens van Hellemondt. Enthusiast of crypto and web development.',
+    description: 'Nederlandse web developer met een voorliefde voor frontend development. Ik schrijf over mijn ideeën en hetgeen dat ik geleerd heb. Allemaal in het Nederlands.',
     siteUrl: 'https://jvh.one',
     social: {
-      twitter: '@jvhellemondt',
+      twitter: { id: '@jvhellemondt', base: 'https://twitter.com/' },
+      github: { id: 'jvhellemondt', base: 'https://github.com/' }
     },
+    referrals: {
+      one: {
+        id: 'nlazvrrf',
+        base: 'https://one.me/'
+      }
+    }
   },
   plugins: [
     {

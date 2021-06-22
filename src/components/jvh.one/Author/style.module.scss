@@ -1,0 +1,30 @@
+.author {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 500px;
+  align-items: center;
+  padding: calc(var(--space) / 2) 0;
+
+  &__image {
+    display: flex;
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1em;
+  }
+  &__intro {
+    opacity: 0.8;
+  }
+  &__site-title {
+    font-size: 1.5em;
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    margin-top: -0.5em;
+    a {
+      margin: 4px 8px;
+    }
+  }
+}
