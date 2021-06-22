@@ -9,7 +9,7 @@ body {
   --bg-content-color: #fff;
   --bg-code: #fdf7eb;
   --body-color: #444;
-  --title-color: #111;
+  --title-color: rgba(0,0,0,0.89);
   --link-color: #6b17e6;
   --border-color: rgba(0, 0, 0, 0.1);
   --space: 3.5rem;
@@ -36,6 +36,6 @@ body.dark {
   --bg-code: rgba(0, 0, 0, 0.3);
   --border-color: rgba(255, 255, 255, 0.1);
   --body-color: #ced8de;
-  --title-color: #fff;
+  --title-color: rgba(255,255,255,0.89);
   --link-color: #af9cef;
 }

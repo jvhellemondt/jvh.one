@@ -15,11 +15,12 @@ body {
 }
 
 a:not(.button) {
+  text-decoration: inherit;
   color: var(--link-color);
-  transition: opacity .2s;
+  transition: opacity 300ms;
 
   &:hover {
-    opacity: .8;
+    opacity: .7;
   }
 }
 
