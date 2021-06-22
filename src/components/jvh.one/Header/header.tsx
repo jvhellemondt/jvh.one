@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 import classNames from 'classnames';
 import * as style from './style.module.scss';
 import ThemeToggle from '../ThemeToggle/theme-toggle';
+import { Maybe } from '../../../../graphql-types';
 
 export const query = graphql`
     query GetSiteMetadataHeader {
@@ -17,9 +18,16 @@ export const query = graphql`
     }
 `;
 
-export default function Header(): ReactElement {
+export type HeaderProps = {
+  subtitle?: Maybe<string>
+}
+
+export default function Header({ subtitle }: HeaderProps): ReactElement {
   const [theme, setTheme] = useState('dark');
-  const data = useStaticQuery(query);
+  const { site } = useStaticQuery(query);
+  const pageTitle = subtitle
+    ? `${subtitle} - ${site?.siteMetadata.title}`
+    : site?.siteMetadata.title;
 
   const { pathname } = useLocation();
   const handleThemeChange = () => {
@@ -35,10 +43,12 @@ export default function Header(): ReactElement {
 
   return (
     <>
-      <Helmet meta={[{
-        name: 'theme-color',
-        content: theme
-      }]}
+      <Helmet
+        title={pageTitle}
+        meta={[{
+          name: 'theme-color',
+          content: theme
+        }]}
       />
       <header className={classNames(style.header, style.header__container)}>
         {pathname === '/'
@@ -46,7 +56,7 @@ export default function Header(): ReactElement {
           <div className={classNames(style.header, style.header__left)}>
             <Link to="/">
               &larr;&nbsp;
-              {data.site?.siteMetadata.title}
+              {site?.siteMetadata.title}
             </Link>
           </div>
         )}
