@@ -32,7 +32,7 @@ export default function HomePage({ data }: { data: Query }): ReactElement {
         const fluid = image?.childImageSharp?.fluid;
         const slug = post.fields?.slug;
         return (
-          <PostCardContainer>
+          <PostCardContainer key={title}>
             <PostCard tabIndex={0} onKeyPress={goToPost(slug)} onClick={goToPost(slug)}>
               <PostCardHeader>
                 {image && fluid && (
