@@ -24,7 +24,7 @@ export default function Tags({
   const goToPost = (slug: Maybe<string> | undefined) => () => navigate(slug || '/');
 
   return (
-    <Layout title="Tag overview">
+    <Layout subtitle="Tags" withAuthor={false}>
       <h1 className="text-center mb5">{`# ${tag}`}</h1>
       {edges.map(({ node: post }) => {
         const title = post.frontmatter?.title || '';
