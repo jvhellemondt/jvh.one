@@ -35,15 +35,22 @@ export const query = graphql`
 type AuthorProps = ComponentPropsWithRef<'div'>
 
 export default function Author(props: AuthorProps): React.ReactElement {
-  const { site, image } = useStaticQuery(query);
+  const {
+    site,
+    image
+  } = useStaticQuery(query);
 
   return (
     <div className={style.author} {...props}>
-      <GatsbyImage
-        className={style.author__image}
-        alt="Picture of author, Jens van Hellemondt"
-        fluid={image.fluid}
-      />
+      <div className={style.author__imageWrapper}>
+        <div className={style.circle1} />
+        <div className={style.circle2} />
+        <GatsbyImage
+          alt="Picture of author, Jens van Hellemondt"
+          fluid={image.fluid}
+          className={style.image}
+        />
+      </div>
 
       <h1 className={classnames(style.author__siteTitle, 'mb2')}>
         {site.me.author}

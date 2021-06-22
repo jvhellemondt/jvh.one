@@ -6,23 +6,60 @@
   align-items: center;
   padding: calc(var(--space) / 2) 0;
 
-  &__image {
+  &__image-wrapper {
     display: flex;
+    position: relative;
     border-radius: 100%;
     width: 150px;
     height: 150px;
     margin-bottom: 1em;
+    box-shadow: 0 8px 40px rgba(#000000, .2);
+
+    .image {
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+      opacity: .95;
+      transition: all 1.5s ease-in-out;
+    }
+
+    .circle-1 {
+      position: absolute;
+      width: 156px;
+      height: 156px;
+      left: -3px;
+      top: -3px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: var(--link-color) var(--link-color) var(--link-color) transparent;
+      border-radius: 50%;
+      transition: all 1.5s ease-in-out;
+      opacity: .8;
+    }
+
+    .circle-2 {
+      @extend .circle-1;
+      width: 162px;
+      height: 162px;
+      top: -6px;
+      left: -6px;
+      border-color: var(--link-color) transparent var(--link-color) var(--link-color);
+    }
   }
+
   &__intro {
     opacity: 0.8;
   }
+
   &__site-title {
     font-size: 1.5em;
   }
+
   &__links {
     display: flex;
     flex-direction: column;
     margin-top: -0.5em;
+
     a {
       margin: 4px 8px;
     }
