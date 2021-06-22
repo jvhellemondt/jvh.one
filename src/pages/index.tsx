@@ -20,7 +20,7 @@ export default function HomePage({ data }: { data: Query }): ReactElement {
   const goToPost = (slug: Maybe<string> | undefined) => () => navigate(slug || '/');
 
   return (
-    <Layout title="Home">
+    <Layout subtitle="Home" withAuthor>
       {nodes.map((post) => {
         const title = post.frontmatter?.title || '';
         const tags = post.frontmatter?.tags || [''];

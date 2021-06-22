@@ -14,7 +14,7 @@ interface IProps {
 
 export default function Layout({
   subtitle,
-  withAuthor = true,
+  withAuthor = false,
   children,
 }: IProps): ReactElement {
   return (
