@@ -17,10 +17,12 @@ body {
 a:not(.button) {
   text-decoration: inherit;
   color: var(--link-color);
-  transition: opacity 300ms;
+  opacity: .6;
+  transition: all 150ms ease-in-out;
 
   &:hover {
-    opacity: .7;
+    transform: scale(1.2);
+    opacity: .9;
   }
 }
 
