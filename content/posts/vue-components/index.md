@@ -1,6 +1,5 @@
 ---
-
-[format:off]: <> ( @formatter:off)
+author: 'Jens van Hellemondt'
 title: 'Vue components'
 date: '2021-03-22'
 published: true
@@ -12,7 +11,6 @@ dat ik eerder gebruikte code, niet nogmaals hoef te schrijven, of te kopiëren e
 cover_image: './assets/elena-koycheva-GUYCM0jhuSA-unsplash.jpg'
 cover_credit: '© [Elena Koycheva](https://unsplash.com/@lenneek)'
 tweet: '1374091858620649475'
-[format:on]: <> (@formatter:on)
 ---
 
 import JTextField from './components/JTextField.vue'

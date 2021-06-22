@@ -1,5 +1,5 @@
 ---
-[format:off]: <> ( @formatter:off)
+author: 'Jens van Hellemondt'
 title: 'Migreren van Gitlab naar Github, simpel!'
 date: '2021-02-02' 
 published: true
@@ -9,7 +9,6 @@ description: 'Het lijkt een flinke taak, van GitLab, heel je repository overzett
 cover_image: './assets/barth-bailey-d2uHXWTkGn4-unsplash.jpg'
 cover_credit: '© [Barth Bailey](https://unsplash.com/@7bbbailey)'
 tweet: '1356636404403601409'
-[format:on]: <> (@formatter:on)
 ---
 
 *Ik heb ooit eens een exotisch uitstapje gemaakt naar Gitlab. Gitlab bood veel waar ik toen geïnteresseerd in was. GitHub had het op zich ook wel, alleen was het daar nèt anders. De afgelopen maanden, bij mijn nieuwe werkgever [Kingscode](https://www.kingscode.nl), heb ik intensief gebruik gemaakt van GitHub waarbij alle zaken waarom ik naar Gitlab overgestapt was, al in het proces zaten. Inmiddels heb ik dit proces zo in de vingers dat GitLab zijn charme verloren heeft. Daarnaast vind ik het vervelend om met GitLab te werken op mobiel. Wat doe je dan? **Overstappen**.*

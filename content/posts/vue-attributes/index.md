@@ -1,6 +1,5 @@
 ---
-
-[format:off]: <> ( @formatter:off)
+author: 'Jens van Hellemondt'
 title: 'Attributes in Vue, wat zijn dat?'
 date: '2021-02-02' 
 published: true
@@ -10,7 +9,6 @@ description: 'Attributes lijken verdacht veel op props. Alleen is het eigenlijk 
 cover_image: './assets/dan-burton-l6jWD4AZIf0-unsplash.jpg' 
 cover_credit: '© [Dan Burton](https://unsplash.com/@single_lens_reflex)'
 tweet: '1356575555576094720'
-[format:on]: <> (@formatter:on)
 ---
 import JTextField from './components/JTextField.vue'
 

@@ -1,6 +1,5 @@
 ---
-
-[format:off]: <> ( @formatter:off)
+author: 'Jens van Hellemondt'
 title: 'Props voor gevorderden, attribute inheritance'
 date: '2021-01-31' 
 published: true
@@ -10,7 +9,6 @@ description: 'De optie inheritAttrs en de $attrs eigenschap. Hoe, wanneer en waa
 cover_image: './assets/images/crissy-jarvis-gdL-UZfnD3I-unsplash.jpg' 
 cover_credit: '© [Crissy Jarvis](https://unsplash.com/photos/gdL-UZfnD3I)'
 tweet: '1355859613896355841'
-[format:on]: <> (@formatter:on)
 ---
 
 import JTextField from './components/JTextField' 

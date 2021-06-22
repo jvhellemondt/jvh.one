@@ -1,6 +1,5 @@
 ---
-
-[format:off]: <> ( @formatter:off)
+author: 'Jens van Hellemondt'
 title: 'Map: de nieuwe array'
 date: '2021-04-30' 
 published: false
@@ -9,7 +8,6 @@ canonical_url: false
 description: ''
 cover_image: '' 
 cover_credit: ''
-[format:on]: <> (@formatter:on)
 ---
 
 ## De nieuwe array

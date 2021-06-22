@@ -1,6 +1,5 @@
 ---
-
-[format:off]: <> ( @formatter:off)
+author: 'Jens van Hellemondt'
 title: 'DRY-principle'
 date: '2021-03-02' 
 published: false
@@ -9,7 +8,6 @@ canonical_url: false
 description: ''
 cover_image: '../elena-koycheva-GUYCM0jhuSA-unsplash.jpg'
 cover_credit: 'Elena Koycheva'
-[format:on]: <> (@formatter:on)
 ---
 
 DRY staat voor [Don’t Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (herhaal jezelf niet). Dit
