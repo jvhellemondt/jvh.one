@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import classNames from 'classnames';
-import FeatherSun from '../../../assets/FeatherSun';
-import FeatherMoon from '../../../assets/FeatherMoon';
+import FeatherSun from '../../../assets/vectors/FeatherSun.svg';
+import FeatherMoon from '../../../assets/vectors/FeatherMoon.svg';
 import * as style from './style.module.scss';
 
 interface IProps {
@@ -20,7 +20,11 @@ export default function ThemeToggle({
       onClick={handleClick}
       className={classNames(style.toggleTheme, dark && style.toggleThemeDark)}
     >
-      {dark ? <FeatherMoon /> : <FeatherSun />}
+      {
+        dark
+          ? <FeatherMoon />
+          : <FeatherSun />
+      }
     </button>
   );
 }
