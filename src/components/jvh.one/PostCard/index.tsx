@@ -8,9 +8,24 @@ import { Maybe } from '../../../../graphql-types';
 
 export type PostCardProps = ComponentPropsWithRef<'div'>
 
-export const PostCard = (props: PostCardProps): React.ReactElement => (
-  <div className={style.postCard} {...props} />
-);
+export const PostCard = (props: PostCardProps): React.ReactElement => {
+  const {
+    className,
+    onClick
+  } = props;
+  const hasClickEvent = typeof onClick === 'function';
+  const classnames = [
+    style.postCard,
+    !!className && className,
+    hasClickEvent && 'pointer'
+  ]
+    .filter(Boolean)
+    .join(' ');
+
+  return (
+    <div className={classnames} {...props} />
+  );
+};
 
 export type PostCardHeaderProps = ComponentPropsWithRef<'div'>
 
@@ -88,7 +103,10 @@ export type PostCardTagsProps = ComponentPropsWithRef<'div'>
 & PostCardTagProps
 
 export const PostCardTags = (props: PostCardTagsProps): React.ReactElement => {
-  const { tags, post } = props;
+  const {
+    tags,
+    post
+  } = props;
   return (
     // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
     <div
@@ -98,7 +116,11 @@ export const PostCardTags = (props: PostCardTagsProps): React.ReactElement => {
       className={style.postCardTags}
     >
       {tags && tags.map((tag) => tag && (
-        <Link key={`${post}-${tag}`} to={`tags/${kebabCase(tag)}`} className={style.postCardTags__link}>
+        <Link
+          key={`${post}-${tag}`}
+          to={`tags/${kebabCase(tag)}`}
+          className={style.postCardTags__link}
+        >
           {`# ${tag}`}
         </Link>
       ))}

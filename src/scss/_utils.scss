@@ -6,6 +6,8 @@
   margin-bottom: var(--space);
 }
 
+.pointer {cursor: pointer;}
+
 @for $i from 1 through 8 {
   .ma#{$i} {
     margin: #{$i * 4}px;
