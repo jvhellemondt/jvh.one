@@ -79,13 +79,18 @@ export const PostCardMeta = (props: PostCardMetaProps): React.ReactElement => {
   );
 };
 
-export type PostCardTagProps = { tags: Maybe<Maybe<string>[]> }
+export type PostCardTagProps = {
+  tags: Maybe<Maybe<string>[]>,
+  post: Maybe<string>
+}
 
-export type PostCardTagsProps = ComponentPropsWithRef<'div'> & PostCardTagProps
+export type PostCardTagsProps = ComponentPropsWithRef<'div'>
+& PostCardTagProps
 
 export const PostCardTags = (props: PostCardTagsProps): React.ReactElement => {
-  const { tags } = props;
+  const { tags, post } = props;
   return (
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
     <div
       role="list"
       onClick={(e) => e.stopPropagation()}
@@ -93,7 +98,7 @@ export const PostCardTags = (props: PostCardTagsProps): React.ReactElement => {
       className={style.postCardTags}
     >
       {tags && tags.map((tag) => tag && (
-        <Link to={`tags/${kebabCase(tag)}`} className={style.postCardTags__link}>
+        <Link key={`${post}-${tag}`} to={`tags/${kebabCase(tag)}`} className={style.postCardTags__link}>
           {`# ${tag}`}
         </Link>
       ))}
