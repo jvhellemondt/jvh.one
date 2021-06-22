@@ -2,6 +2,21 @@ const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const kebabCase = require('lodash.kebabcase');
 
+exports.onCreateWebpackConfig = ({
+  stage,
+  actions,
+  getConfig,
+}) => {
+  if (stage === 'develop') {
+    const config = getConfig();
+    const miniCssExtractPlugin = config.plugins.find(
+      (plugin) => plugin.constructor.name === 'MiniCssExtractPlugin'
+    );
+    if (miniCssExtractPlugin) miniCssExtractPlugin.options.ignoreOrder = true;
+    actions.replaceWebpackConfig(config);
+  }
+};
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
 
@@ -61,9 +76,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   });
 
-  // Extract tag data from query
   const tags = result.data.tagsGroup.group;
-  // Make tag pages
   tags.forEach((tag) => {
     createPage({
       path: `/tags/${kebabCase(tag.fieldValue)}/`,
