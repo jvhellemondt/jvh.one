@@ -5,7 +5,7 @@ import { graphql, useStaticQuery, Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import classNames from 'classnames';
 import * as style from './style.module.scss';
-import ThemeToggle from '../ThemeToggle/theme-toggle';
+import ThemeToggle from '../../base/ThemeToggle/theme-toggle';
 import { Maybe } from '../../../../graphql-types';
 
 export const query = graphql`
