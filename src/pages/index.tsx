@@ -35,18 +35,18 @@ export default function HomePage({ data }: { data: Query }): ReactElement {
         return (
           <PostCardContainer key={title}>
             <PostCard tabIndex={0} onKeyPress={goToPost(slug)} onClick={goToPost(slug)}>
-              <PostCardHeader>
-                {image && fluid && (
+              {image && fluid && (
+                <PostCardHeader>
                   <PostCardCoverImage
                     alt={image?.name}
                     fluid={fluid as FluidObject}
                   />
-                )}
-              </PostCardHeader>
+                </PostCardHeader>
+              )}
               <PostCardTitle>{title}</PostCardTitle>
               <PostCardContent>{description}</PostCardContent>
               <PostCardMeta published={published} date={date} timeToRead={timeToRead} />
-              <PostCardTags post={title} tags={tags} />
+              <PostCardTags postTitle={title} tags={tags} />
             </PostCard>
           </PostCardContainer>
         );
