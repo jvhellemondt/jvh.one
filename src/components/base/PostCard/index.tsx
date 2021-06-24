@@ -72,7 +72,7 @@ export type PostCardMetaProps = ComponentPropsWithRef<'div'>
 & {
   published: string | boolean;
   date: string;
-  timeToRead: string | number
+  timeToRead?: string | number
 }
 
 export const PostCardMeta = (props: PostCardMetaProps): React.ReactElement => {
@@ -87,16 +87,18 @@ export const PostCardMeta = (props: PostCardMetaProps): React.ReactElement => {
         {published && (<span>{`Gepubliceerd op ${date}`}</span>)}
         {!published && (<span>{`Verwachte publicatie datum ${date}`}</span>)}
       </div>
-      <div className={style.postCardMeta__right}>
-        <strong>{`${timeToRead} minuten lezen`}</strong>
-      </div>
+      {timeToRead && (
+        <div className={style.postCardMeta__right}>
+          <strong>{`${timeToRead} minuten lezen`}</strong>
+        </div>
+      )}
     </div>
   );
 };
 
 export type PostCardTagProps = {
   tags: Maybe<Maybe<string>[]>,
-  post: Maybe<string>
+  postTitle: Maybe<string>
 }
 
 export type PostCardTagsProps = ComponentPropsWithRef<'div'>
@@ -105,7 +107,7 @@ export type PostCardTagsProps = ComponentPropsWithRef<'div'>
 export const PostCardTags = (props: PostCardTagsProps): React.ReactElement => {
   const {
     tags,
-    post
+    postTitle
   } = props;
   return (
     // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
@@ -117,7 +119,7 @@ export const PostCardTags = (props: PostCardTagsProps): React.ReactElement => {
     >
       {tags && tags.map((tag) => tag && (
         <Link
-          key={`${post}-${tag}`}
+          key={`${postTitle}-${tag}`}
           to={`tags/${kebabCase(tag)}`}
           className={style.postCardTags__link}
         >
