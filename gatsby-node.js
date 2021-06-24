@@ -69,7 +69,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve('./src/templates/post.tsx'),
+      component: path.resolve('./src/templates/posts/index.tsx'),
       context: {
         slug: node.fields.slug,
       },
@@ -80,7 +80,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   tags.forEach((tag) => {
     createPage({
       path: `/tags/${kebabCase(tag.fieldValue)}/`,
-      component: path.resolve('./src/templates/tags.tsx'),
+      component: path.resolve('./src/templates/tags/index.tsx'),
       context: {
         tag: tag.fieldValue,
       },

@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { graphql, Link } from 'gatsby';
-import { MarkdownRemark } from '../../graphql-types';
-import Layout from '../layouts';
+import { MarkdownRemark } from '../../../graphql-types';
+import Layout from '../../layouts';
 
 export type PostQuery = {
   data:{ markdownRemark: MarkdownRemark}
@@ -11,7 +11,7 @@ export default function Post({ data }: PostQuery): ReactElement {
   const post = data.markdownRemark;
 
   return (
-    <Layout subtitle={post.frontmatter?.title}>
+    <Layout subtitle={post.frontmatter?.title} withAuthor="bottom">
       <h1>{post?.frontmatter?.title}</h1>
       <small>{post?.frontmatter?.date}</small>
       {/* eslint-disable-next-line react/no-danger */}

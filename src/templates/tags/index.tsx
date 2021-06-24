@@ -7,9 +7,9 @@ import {
   PostCardContent,
   PostCardMeta,
   PostCardTitle
-} from '../components/jvh.one/PostCard';
-import Layout from '../layouts';
-import { Maybe, Query } from '../../graphql-types';
+} from '../../components/base/PostCard';
+import Layout from '../../layouts';
+import { Maybe, Query } from '../../../graphql-types';
 
 type TagsProps = {
   data: Query, pageContext: PageContext
