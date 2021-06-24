@@ -25,14 +25,6 @@ export const Section = (props: React.ComponentPropsWithRef<'section'>): ReactEle
   );
 };
 
-// export const Index = (props: { children: ReactNode }) => (
-//   <header>
-//     <Container className={style.header}>
-//       {props.children}
-//     </Container>
-//   </header>
-// );
-//
 export const Block = (props: { children: ReactNode }): ReactElement => (
   <Section>
     <Container {...props} />
