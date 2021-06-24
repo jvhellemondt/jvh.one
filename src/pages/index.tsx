@@ -12,7 +12,7 @@ import {
   PostCardMeta,
   PostCardTags,
   PostCardTitle
-} from '../components/jvh.one/PostCard';
+} from '../components/base/PostCard';
 
 export default function HomePage({ data }: { data: Query }): ReactElement {
   const { nodes } = data.allMarkdownRemark;
@@ -20,7 +20,7 @@ export default function HomePage({ data }: { data: Query }): ReactElement {
   const goToPost = (slug: Maybe<string> | undefined) => () => navigate(slug || '/');
 
   return (
-    <Layout subtitle="Home" withAuthor>
+    <Layout subtitle="Home" withAuthor="top">
       {nodes.map((post) => {
         const title = post.frontmatter?.title || '';
         const tags = post.frontmatter?.tags || [''];
