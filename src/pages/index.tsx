@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { graphql, navigate } from 'gatsby';
+import { FluidObject } from 'gatsby-image';
 import Layout from '../layouts';
 import { Maybe, Query } from '../../graphql-types';
 
@@ -38,7 +39,7 @@ export default function HomePage({ data }: { data: Query }): ReactElement {
                 {image && fluid && (
                   <PostCardCoverImage
                     alt={image?.name}
-                    fluid={fluid}
+                    fluid={fluid as FluidObject}
                   />
                 )}
               </PostCardHeader>
