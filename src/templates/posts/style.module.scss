@@ -1,3 +1,5 @@
+@import "src/scss/utils";
+
 .post-title {
   margin:     0 auto;
   max-width:  var(--content-width);
@@ -34,6 +36,8 @@
     width:      100%;
   }
   &__content {
+    @extend .mb4;
+
     h2:first-child {
       margin-top: 0;
     }
@@ -57,4 +61,9 @@
 }
 .post-author {
   margin-top: calc(var(--space) / 2);
+}
+
+.twitter-widget {
+  @extend .mb8;
+
 }
