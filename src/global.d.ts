@@ -23,4 +23,5 @@ interface Window {
   __setPreferredTheme: __setPreferredThemeFunction;
   __theme: string;
   __onThemeChange: __onThemeChangeFunction;
+  twttr: any;
 }
