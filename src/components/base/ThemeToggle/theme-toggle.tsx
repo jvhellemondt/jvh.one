@@ -9,22 +9,22 @@ interface IProps {
   handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-export default function ThemeToggle({
+const ThemeToggle = ({
   dark = false,
   handleClick
-}: IProps): ReactElement {
-  return (
-    <button
-      type="button"
-      aria-label="Toggle dark/light mode"
-      onClick={handleClick}
-      className={classNames(style.toggleTheme, dark && style.toggleThemeDark)}
-    >
-      {
-        dark
-          ? <FeatherMoon />
-          : <FeatherSun />
-      }
-    </button>
-  );
-}
+}: IProps): ReactElement => (
+  <button
+    type="button"
+    aria-label="Toggle dark/light mode"
+    onClick={handleClick}
+    className={classNames(style.toggleTheme, dark && style.toggleThemeDark)}
+  >
+    {
+      dark
+        ? <FeatherMoon />
+        : <FeatherSun />
+    }
+  </button>
+);
+
+export default ThemeToggle;

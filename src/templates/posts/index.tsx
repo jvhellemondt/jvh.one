@@ -14,6 +14,7 @@ import {
   PostCardTags
 } from '../../components/base/PostCard';
 import { Tweet } from '../../components/react-tweet-embed';
+import useTheme from '../../hooks/useTheme';
 
 export type PostQuery = {
   data: { markdownRemark: MarkdownRemark }
@@ -28,6 +29,8 @@ export default function Post({ data }: PostQuery): ReactElement {
   const published = post.frontmatter?.published || false;
   const image = post.frontmatter?.cover_image;
   const fluid = image?.childImageSharp?.fluid;
+
+  const [theme] = useTheme();
 
   return (
     <Layout subtitle={post.frontmatter?.title} withAuthor="bottom">
@@ -56,7 +59,10 @@ export default function Post({ data }: PostQuery): ReactElement {
             dangerouslySetInnerHTML={{ __html: `${post.html}` }}
           />
 
-          {twitter && <Tweet id={twitter} />}
+          {
+            twitter
+            && <Tweet id={twitter} widgetClass={style.twitterWidget} options={{ theme }} />
+          }
 
           <div className="post__footer">
             <PostCardTags postTitle={title} tags={tags} />
