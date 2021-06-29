@@ -52,7 +52,7 @@ export default function Author(props: AuthorProps): React.ReactElement {
         />
       </div>
 
-      <h1 className={classnames(style.author__siteTitle, 'mb2')}>
+      <h1 className={classnames(style.author__siteTitle)}>
         {site.me.author}
       </h1>
 

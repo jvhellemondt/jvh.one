@@ -1,3 +1,5 @@
+@import './src/scss/utils';
+
 .author {
   display: flex;
   flex-direction: column;
@@ -7,12 +9,12 @@
   padding: calc(var(--space) / 2) 0;
 
   &__image-wrapper {
+    @extend .mb8;
     display: flex;
     position: relative;
     border-radius: 100%;
     width: 150px;
     height: 150px;
-    margin-bottom: 1em;
     box-shadow: 0 8px 40px rgba(#000000, .2);
 
     .image {
@@ -47,12 +49,14 @@
     }
   }
 
-  &__intro {
-    opacity: 0.8;
+  &__site-title {
+    @extend .mb4;
+    font-size: 1.5em;
   }
 
-  &__site-title {
-    font-size: 1.5em;
+  &__intro {
+    padding: 4px 12px;
+    opacity: 0.8;
   }
 
   &__links {
