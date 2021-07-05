@@ -120,7 +120,7 @@ export const PostCardTags = (props: PostCardTagsProps): React.ReactElement => {
       {tags && tags.map((tag) => tag && (
         <Link
           key={`${postTitle}-${tag}`}
-          to={`tags/${kebabCase(tag)}`}
+          to={`/tags/${kebabCase(tag)}`}
           className={style.postCardTags__link}
         >
           {`# ${tag}`}
