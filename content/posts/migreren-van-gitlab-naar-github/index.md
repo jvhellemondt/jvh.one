@@ -69,10 +69,4 @@ Ga nu naar GitHub en aanschouw jouw nieuwe repository mét jouw applicatie codeb
 <br>
 Bedankt voor het lezen! Ik snap dat je dit niet vaak zal doen, maar mocht het toch eens voorkomen, dan weet je nu hoe.
 
-Mocht je vragen hebben, dan mag je die mij natuurlijk stellen! Je kunt ze stellen door een e-mail te sturen naar [me@jvh.one](mailto:me@jvh.one) of door te reageren op deze Tweet: 
-
-Ga nu naar GitHub en aanschouw jouw nieuwe repository mét jouw applicatie codebase.
-<br>
-<br>
-<br>
-Bedankt voor het lezen! Ik snap dat je dit niet vaak zal doen, maar mocht het toch eens voorkomen, dan weet je nu hoe.
+Mocht je vragen hebben, dan mag je die mij natuurlijk stellen! Je kunt ze stellen door een e-mail te sturen naar [me@jvh.one](mailto:me@jvh.one) of door te reageren op deze Tweet:
