@@ -13,8 +13,6 @@ cover_credit: '© [Elena Koycheva](https://unsplash.com/@lenneek)'
 tweet: '1374091858620649475'
 ---
 
-import JTextField from './components/JTextField.vue'
-
 ## Componenten in de wereld van Javascript
 
 *Componenten, je ontkomt er tegenwoordig niet meer aan. Alle grote Javascript-frameworks (Vue, Svelte, Ember, React,
@@ -94,8 +92,11 @@ const JTextField = {
 }
 ```
 
-Ik heb een voorbeeld gemaakt op [Codepen](https://codepen.io/jvhellemondt/pen/mdRbPNQ). Op naar Single File Components.
+Hieronder het resultaat, daarna op naar Single File Components.
 
+### JTextField -- String Template Component (codesandbox)
+
+https://codesandbox.io/s/jtextfield--string-template-component-m79vr?file=/JTextField.js
 
 ### Single File Components
 
@@ -190,13 +191,13 @@ export default {
 </style>
 ```
 
-En ook als `Single File Component`, ziet dit component er als volgt uit:
+En ook als `Single File Component`, ziet het component er hetzelfde uit.
 
-<div>
-<JTextField label="Voornaam"/>
-<JTextField label="Achternaam"/>
-</div>
-<br>
-<br>
+### JTextField -- Single File Component (codesandbox)
+
+https://codesandbox.io/s/jtextfield--single-file-component-06fyd?file=/JTextField.vue
+
+<br/>
+<br/>
 
 Bedankt voor het lezen! Ik hoop dat nu het verschil tussen `String Template Components` en `Single File Components` en de voordelen van `Single File Components`, duidelijk zijn.
