@@ -11,12 +11,8 @@ cover_credit: '© [Crissy Jarvis](https://unsplash.com/photos/gdL-UZfnD3I)'
 tweet: '1355859613896355841'
 ---
 
-import JTextField from './components/JTextField' 
-import JTextFieldAttrs from './components/JTextFieldAttrs' 
-import JTextFieldInheritAttrs from './components/JTextFieldInheritAttrs'
-
-*Ik kom het de laatste tijd vaak tegen. En ergens diep, heel diep in de donkere krochten van de **Vue v2.x**
-documentatie … vinden we er iets over... **$attrs** *
+_Ik kom het de laatste tijd vaak tegen. En ergens diep, heel diep in de donkere krochten van de **Vue v2.x**
+documentatie … vinden we er iets over... **$attrs**_
 
 *En wel onder het kopje, Props > Non props attributes > Disabling attribute inheritance. Maar... Wat is het? Wanneer
 gebruik je het? En waarom bestaat het?*
@@ -148,7 +144,7 @@ bijbehorende code):
 
 ###### components/JTextField.vue
 
-<JTextField label="Voornaam" placeholder="Vul hier uw voornaam in" /> 
+https://codesandbox.io/s/jtextfield-1zkdv?file=/src/App.vue
 
 ```vue
 
@@ -287,7 +283,7 @@ $attrs binden aan het input-element. De template van `JTextField` ziet er dan al
 
 Dit levert het volgende resultaat op en dat lijkt er al een stuk meer op.
 
-<JTextFieldAttrs label="Voornaam" placeholder="Vul hier uw voornaam in" />
+https://codesandbox.io/s/jtextfieldattrs-4d2jo?file=/src/App.vue
 
 Als we nu de html-code inspecteren, zien we het volgende:
 
@@ -326,7 +322,7 @@ export default {
 </script>
 ```
 
-<JTextFieldInheritAttrs label="Voornaam" placeholder="Vul hier uw voornaam in" />
+https://codesandbox.io/s/jtextfieldinheritattrs-nbwmy?file=/src/App.vue
 
 ```html
 
@@ -349,7 +345,7 @@ Als voorbeeld, als je JTextField als volgt gebruikt:
 `<JTextField label="Voornaam" placeholder="Vul hier uw voornaam in" :style="{color: 'red'}" />`, dan krijg je het
 volgende en je ziet in de html-code dat het `style`-attribute geërfd is door het div-element.
 
-<JTextFieldInheritAttrs label="Voornaam" placeholder="Vul hier uw voornaam in" :style="{color: 'red'}" />
+https://codesandbox.io/s/jtextfieldinheritattrs-red-wh319?file=/src/App.vue
 
 ```html
 

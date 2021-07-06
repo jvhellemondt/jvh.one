@@ -1,16 +1,14 @@
 ---
-author: 'Jens van Hellemondt'
-title: 'Attributes in Vue, wat zijn dat?'
+author: 'Jens van Hellemondt' 
+title: 'Attributes in Vue, wat zijn dat?' 
 date: '2021-02-02' 
 published: true
 tags: ['Vue', 'Vue2', 'attribute', 'props', 'inheritance']
 canonical_url: false 
-description: 'Attributes lijken verdacht veel op props. Alleen is het eigenlijk andersom. Een prop is een attribute! En het zijn de bouwstenen die onze componenten herbruikbaar maken en ze zijn cruciaal voor de vorming van componenten.'
-cover_image: './assets/dan-burton-l6jWD4AZIf0-unsplash.jpg' 
+description: 'Attributes lijken verdacht veel op props. Alleen is het eigenlijk andersom. Een prop is een attribute! En het zijn de bouwstenen die onze componenten herbruikbaar maken en ze zijn cruciaal voor de vorming van componenten.' cover_image: './assets/dan-burton-l6jWD4AZIf0-unsplash.jpg' 
 cover_credit: '© [Dan Burton](https://unsplash.com/@single_lens_reflex)'
 tweet: '1356575555576094720'
 ---
-import JTextField from './components/JTextField.vue'
 
 *Een van de eerste zaken waarmee je in aanraking komt als je met Vue (of een ander Javascript framework) gaat werken,
 zijn `props`. `Props` zijn de bouwstenen die jouw [componenten](/vue-components) vormen. In mijn
@@ -71,24 +69,24 @@ export default {
 
 <style lang="scss" scoped>
 .text-field {
-  display:         flex;
-  flex-direction:  column;
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  max-width:       250px;
-  margin:          8px 0
+  max-width: 250px;
+  margin: 8px 0
 }
 
 .label {
-  display:     flex;
+  display: flex;
   font-weight: 300;
-  text-align:  left;
+  text-align: left;
 }
 
 .input {
-  border:  1px solid #669900;
+  border: 1px solid #669900;
   display: flex;
   padding: 8px;
-  width:   100%;
+  width: 100%;
 }
 </style>
 ```
@@ -99,16 +97,16 @@ input-element -- waarom? Daar vertel ik over
 in [props voor gevorderden, attribute inheritance](/props-voor-gevorderde-attribute-inheritance)). Wanneer we dit
 component in andere componenten zouden gebruiken, dan kan dat door de component op te nemen in de Vue
 template (`<template>...</template>`),
-bijvoorbeeld: `<JTextField label="Voornaam" placeholder="Vul hier uw voornaam in" />`.
+bijvoorbeeld: `<JTextField label="Voornaam" placeholder="Vul hier uw voornaam in" />`. Wanneer we de achternaam ook
+willen, dan veranderen we de attributen naar `<JTextField label="Achternaam" placeholder="Vul hier uw achternaam in" />`
+. Bij elkaar ziet het er dan zo uit:
 
-Dit ziet er dan zo uit:
-<JTextField label="Voornaam" placeholder="Vul hier uw voornaam in" />
+https://codesandbox.io/s/jtextfield-f4yqo
 
-Wanneer we de achternaam willen, dan veranderen we de attributen naar `<JTextField label="Achternaam" placeholder="Vul hier uw achternaam in" />`, met als gevolg dat `JTextField` er zo uitziet:
-<JTextField label="Achternaam" placeholder="Vul hier uw achternaam in" />
-
-Je ziet dat je door een simpele wijziging in de attributen, de component gemakkelijk anders kan vormgeven. In Vue zijn de attributen de props en non-props attributes, die je meegeeft aan componenten, in de template van... Andere componenten.
+Je ziet dat je door een simpele wijziging in de attributen, de component gemakkelijk anders kan vormgeven. In Vue zijn
+de attributen de props en non-props attributes, die je meegeeft aan componenten, in de template van... Andere
+componenten.
 <br>
 <br>
-<br>
-Bedankt voor het lezen! Hopelijk schept dit duidelijkheid over de attributen/props die je onbewust en vaak gebruikt wanneer je met Vue werkt.
+Bedankt voor het lezen! Hopelijk schept dit duidelijkheid over de attributen/props die je onbewust en vaak gebruikt
+wanneer je met Vue werkt.
