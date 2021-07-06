@@ -2,11 +2,17 @@
   text-align: center;
 }
 
+.full-width {
+  width: 100%;
+}
+
 .space-bottom {
   margin-bottom: var(--space);
 }
 
-.pointer {cursor: pointer;}
+.pointer {
+  cursor: pointer;
+}
 
 @for $i from 1 through 8 {
   .ma#{$i} {
