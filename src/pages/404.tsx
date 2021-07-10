@@ -11,20 +11,13 @@ import {
 import Layout from '../layouts';
 import { Maybe, Query } from '../../graphql-types';
 import * as style from './pages.module.scss';
-import Dropdown from '../components/base/Dropdown/Dropdown';
 
 type NotFoundProps = { data: Query }
 
 const NotFoundPage = ({ data }: NotFoundProps): ReactElement => {
-  const {
-    edges,
-    distinct: allTags
-  } = data.allMarkdownRemark;
+  const { edges, } = data.allMarkdownRemark;
 
   const goToPost = (slug: Maybe<string> | undefined) => () => navigate(slug || '/');
-  const handleTagSelect = (tag: string) => {
-    console.log({ tag });
-  };
 
   return (
     <Layout subtitle="Pagina niet gevonden..">
