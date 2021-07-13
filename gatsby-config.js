@@ -45,13 +45,6 @@ module.exports = {
         name: 'posts'
       }
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/static/`,
-        name: 'static'
-      }
-    },
     'gatsby-plugin-image',
     {
       resolve: 'gatsby-plugin-sharp',
@@ -113,7 +106,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/assets/images/icon.png'
+        icon: 'src/static/images/icon.png'
       }
     },
     {
