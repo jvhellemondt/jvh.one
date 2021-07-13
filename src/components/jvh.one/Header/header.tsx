@@ -30,7 +30,7 @@ export default function Header({ subtitle }: HeaderProps): ReactElement {
     : site?.siteMetadata.title;
 
   const { pathname } = useLocation();
-  const [theme, handleThemeChange] = useTheme();
+  const [theme, handleThemeToggle] = useTheme();
 
   return (
     <>
@@ -53,7 +53,7 @@ export default function Header({ subtitle }: HeaderProps): ReactElement {
         )}
 
         <div className={classNames(style.header, style.header__right)}>
-          <ThemeToggle handleClick={handleThemeChange} dark={theme === 'dark'} />
+          <ThemeToggle handleClick={handleThemeToggle} dark={theme === 'dark'} />
         </div>
       </header>
     </>
