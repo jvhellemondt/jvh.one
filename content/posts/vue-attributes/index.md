@@ -5,7 +5,8 @@ date: '2021-02-02'
 published: true
 tags: ['Vue', 'Vue2', 'attribute', 'props', 'inheritance']
 canonical_url: false 
-description: 'Attributes lijken verdacht veel op props. Alleen is het eigenlijk andersom. Een prop is een attribute! En het zijn de bouwstenen die onze componenten herbruikbaar maken en ze zijn cruciaal voor de vorming van componenten.' cover_image: './assets/dan-burton-l6jWD4AZIf0-unsplash.jpg' 
+description: 'Attributes lijken verdacht veel op props. Alleen is het eigenlijk andersom. Een prop is een attribute! En het zijn de bouwstenen die onze componenten herbruikbaar maken en ze zijn cruciaal voor de vorming van componenten.' 
+cover_image: './assets/dan-burton-l6jWD4AZIf0-unsplash.jpg' 
 cover_credit: '© [Dan Burton](https://unsplash.com/@single_lens_reflex)'
 tweet: '1356575555576094720'
 ---
