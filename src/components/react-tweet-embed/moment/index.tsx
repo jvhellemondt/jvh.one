@@ -1,28 +1,49 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import useTwitterAPI, { useTwitterAPIProps } from '../useTwitterAPI';
 
 type MomentProps = {
   errorMessageClass?: string;
   widgetClass?: string;
+  options?: any;
 } & useTwitterAPIProps;
 
 const Moment = (props: MomentProps) => {
+  const [momentLoaded, setMomentLoaded] = useState(false);
+  const [_theme, _setTheme] = useState(null);
   const target = useRef(null);
+  const { current } = target;
 
   const {
-    id, sourceType, slug, options, errorMessageClass, widgetClass
+    id,
+    sourceType,
+    slug,
+    options: { theme },
+    errorMessageClass,
+    widgetClass
   } = props;
   const errorMessage = 'Whoops! We couldn\'t access this Moment!';
 
   const {
     isLoaded, isAvailable, twitterAPI, params
-  } = useTwitterAPI({
-    id, sourceType, slug, options
-  });
+  } = useTwitterAPI({ id, sourceType, slug });
 
-  if (isLoaded && isAvailable) {
-    if (twitterAPI) twitterAPI.widgets.createMoment(params, target.current, options);
-  }
+  useEffect(() => {
+    if (isLoaded && isAvailable && twitterAPI && current && !momentLoaded) {
+      twitterAPI.widgets.createMoment(params, target.current, { theme });
+      setMomentLoaded(true);
+      _setTheme(theme);
+    }
+  }, [isLoaded, isAvailable, twitterAPI, current, momentLoaded]);
+
+  useEffect(() => {
+    if (_theme !== theme) {
+      // @ts-ignore
+      if (target.current) target.current.innerHTML = '';
+      setMomentLoaded(false);
+      _setTheme(theme);
+    }
+  }, [theme, _theme]);
+
   if (isLoaded && !isAvailable) {
     return <div className={errorMessageClass}>{errorMessage}</div>;
   }

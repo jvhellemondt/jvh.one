@@ -33,11 +33,10 @@ export type useTwitterAPIProps = {
   id: string;
   sourceType?: string;
   slug?: string;
-  options?: any;
 }
 
 const useTwitterAPI = ({
-  id, sourceType, slug, options
+  id, sourceType, slug
 }: useTwitterAPIProps): useTwitterAPIReturn => {
   const [twttr, setTwttr] = useState(null);
   const [params, setParams] = useState<twitterParams>(null);
@@ -64,7 +63,7 @@ const useTwitterAPI = ({
       setLoaded(true);
     };
     connectAPI();
-  }, [id, sourceType, slug, options]);
+  }, [id, sourceType, slug]);
 
   return {
     isLoaded, isAvailable, twitterAPI: twttr, params

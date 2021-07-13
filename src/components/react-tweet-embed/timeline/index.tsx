@@ -1,28 +1,49 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import useTwitterAPI, { useTwitterAPIProps } from '../useTwitterAPI';
 
 type TimelineProps = {
   errorMessageClass?: string;
   widgetClass?: string;
+  options?: any;
 } & useTwitterAPIProps;
 
 const Timeline = (props: TimelineProps) => {
+  const [timelineLoaded, setTimelineLoaded] = useState(false);
+  const [_theme, _setTheme] = useState(null);
   const target = useRef(null);
+  const { current } = target;
 
   const {
-    id, sourceType, slug, options, errorMessageClass, widgetClass
+    id,
+    sourceType,
+    slug,
+    options: { theme },
+    errorMessageClass,
+    widgetClass
   } = props;
   const errorMessage = 'Whoops! We couldn\'t access this Timeline!';
 
   const {
     isLoaded, isAvailable, twitterAPI, params
-  } = useTwitterAPI({
-    id, sourceType, slug, options
-  });
+  } = useTwitterAPI({ id, sourceType, slug });
 
-  if (isLoaded && isAvailable) {
-    if (twitterAPI) twitterAPI.widgets.createTimeline(params, target.current, options);
-  }
+  useEffect(() => {
+    if (isLoaded && isAvailable && twitterAPI && current && !timelineLoaded) {
+      twitterAPI.widgets.createTimeline(params, target.current, { theme });
+      setTimelineLoaded(true);
+      _setTheme(theme);
+    }
+  }, [isLoaded, isAvailable, twitterAPI, current, timelineLoaded]);
+
+  useEffect(() => {
+    if (_theme !== theme) {
+      // @ts-ignore
+      if (target.current) target.current.innerHTML = '';
+      setTimelineLoaded(false);
+      _setTheme(theme);
+    }
+  }, [theme, _theme]);
+
   if (isLoaded && !isAvailable) {
     return <div className={errorMessageClass}>{errorMessage}</div>;
   }
