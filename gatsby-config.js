@@ -5,8 +5,14 @@ module.exports = {
     description: 'Nederlandse web developer met een voorliefde voor frontend development. Ik schrijf over mijn ideeën en hetgeen dat ik geleerd heb. Allemaal in het Nederlands.',
     siteUrl: 'https://jvh.one',
     social: {
-      twitter: { id: '@jvhellemondt', base: 'https://twitter.com/' },
-      github: { id: 'jvhellemondt', base: 'https://github.com/' }
+      twitter: {
+        id: '@jvhellemondt',
+        base: 'https://twitter.com/'
+      },
+      github: {
+        id: 'jvhellemondt',
+        base: 'https://github.com/'
+      }
     },
     referrals: {
       one: {
@@ -20,24 +26,24 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/src/assets/images/`,
+        path: `${__dirname}/src/assets/images/`
       },
-      __key: 'images',
+      __key: 'images'
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: `${__dirname}/src/pages/`,
+        path: `${__dirname}/src/pages/`
       },
-      __key: 'pages',
+      __key: 'pages'
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/posts/`,
-        name: 'posts',
-      },
+        name: 'posts'
+      }
     },
     {
       resolve: 'gatsby-plugin-sharp',
@@ -45,9 +51,9 @@ module.exports = {
         defaults: {
           formats: ['auto', 'webp'],
           placeholder: 'dominantColor',
-          quality: 10,
-        },
-      },
+          quality: 10
+        }
+      }
     },
     'gatsby-transformer-sharp',
     {
@@ -63,8 +69,8 @@ module.exports = {
               ],
               services: {
                 // The service-specific options by the name of the service
-              },
-            },
+              }
+            }
           },
           {
             resolve: 'gatsby-remark-prismjs',
@@ -109,44 +115,44 @@ module.exports = {
                   language: 'superscript',
                   extend: 'javascript',
                   definition: {
-                    superscript_types: /(SuperType)/,
+                    superscript_types: /(SuperType)/
                   },
                   insertBefore: {
                     function: {
-                      superscript_keywords: /(superif|superelse)/,
-                    },
-                  },
-                },
+                      superscript_keywords: /(superif|superelse)/
+                    }
+                  }
+                }
               ],
               // Customize the prompt used in shell output
               // Values below are default
               prompt: {
                 user: 'root',
                 host: 'localhost',
-                global: false,
+                global: false
               },
               // By default the HTML entities <>&'" are escaped.
               // Add additional HTML escapes by providing a mapping
               // of HTML entities and their escape value IE: { '}': '&#123;' }
-              escapeEntities: {},
-            },
-          },
-        ],
-      },
+              escapeEntities: {}
+            }
+          }
+        ]
+      }
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: '262589136',
-      },
+        trackingId: '262589136'
+      }
     },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/assets/images/icon.png',
-      },
+        icon: 'src/assets/images/icon.png'
+      }
     },
     {
       resolve: 'gatsby-plugin-react-svg',
@@ -156,5 +162,5 @@ module.exports = {
         }
       }
     }
-  ],
+  ]
 };
