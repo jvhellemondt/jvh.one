@@ -1,7 +1,7 @@
 import React, { ComponentPropsWithRef } from 'react';
 import { Link } from 'gatsby';
 import kebabCase from 'lodash.kebabcase';
-import GatsbyImage, { GatsbyImageProps } from 'gatsby-image';
+import { GatsbyImage, GatsbyImageProps } from 'gatsby-plugin-image';
 
 import * as style from './style.module.scss';
 import { Maybe } from '../../../../graphql-types';
