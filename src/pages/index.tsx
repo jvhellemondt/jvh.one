@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { graphql, navigate } from 'gatsby';
-import { FluidObject } from 'gatsby-image';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 import Layout from '../layouts';
 import { Maybe, Query } from '../../graphql-types';
 
@@ -30,16 +30,17 @@ export default function HomePage({ data }: { data: Query }): ReactElement {
         const published = post.frontmatter?.published || false;
         const description = post.frontmatter?.description || '';
         const image = post.frontmatter?.cover_image;
-        const fluid = image?.childImageSharp?.fluid;
+        const gatsbyImageData = image?.childImageSharp?.gatsbyImageData;
         const slug = post.fields?.slug;
         return (
           <PostCardContainer key={title}>
             <PostCard tabIndex={0} onKeyPress={goToPost(slug)} onClick={goToPost(slug)}>
-              {image && fluid && (
+              {image && gatsbyImageData && (
                 <PostCardHeader>
                   <PostCardCoverImage
                     alt={image?.name}
-                    fluid={fluid as FluidObject}
+                    image={gatsbyImageData as IGatsbyImageData}
+                    objectFit="cover"
                   />
                 </PostCardHeader>
               )}
@@ -79,9 +80,7 @@ export const query = graphql`
                     cover_image {
                         name
                         childImageSharp {
-                            fluid(maxWidth: 1080, maxHeight: 400, fit: COVER) {
-                                ...GatsbyImageSharpFluid
-                            }
+                            gatsbyImageData(layout: FULL_WIDTH, aspectRatio: 2.5)
                         }
                     }
                     title

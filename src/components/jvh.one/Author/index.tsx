@@ -1,7 +1,7 @@
 import React, { ComponentPropsWithRef } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import classnames from 'classnames';
-import GatsbyImage from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import * as style from './style.module.scss';
 import createSocialUrl from '../../../utils/socialUrl';
 
@@ -24,9 +24,9 @@ export const query = graphql`
                 }
             }
         }
-        image: imageSharp(fluid: {originalName: {eq: "author.png"}}) {
-            fluid(maxWidth: 150, maxHeight: 150, fit: CONTAIN) {
-                ...GatsbyImageSharpFluid
+        file(base: {eq: "author.png"})  {
+            image: childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH)
             }
         }
     }
@@ -37,7 +37,7 @@ type AuthorProps = ComponentPropsWithRef<'div'>
 export default function Author(props: AuthorProps): React.ReactElement {
   const {
     site,
-    image
+    file: { image: { gatsbyImageData } }
   } = useStaticQuery(query);
 
   return (
@@ -47,7 +47,8 @@ export default function Author(props: AuthorProps): React.ReactElement {
         <div className={style.circle2} />
         <GatsbyImage
           alt="Picture of author, Jens van Hellemondt"
-          fluid={image.fluid}
+          image={gatsbyImageData}
+          objectFit="cover"
           className={style.image}
         />
       </div>

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { graphql } from 'gatsby';
-import { FluidObject } from 'gatsby-image';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 import { MarkdownRemark } from '../../../graphql-types';
 import Layout from '../../layouts';
 
@@ -28,7 +28,7 @@ export default function Post({ data }: PostQuery): ReactElement {
   const twitter = post.frontmatter?.tweet;
   const published = post.frontmatter?.published || false;
   const image = post.frontmatter?.cover_image;
-  const fluid = image?.childImageSharp?.fluid;
+  const gatsbyImageData = image?.childImageSharp?.gatsbyImageData;
 
   const [theme] = useTheme();
 
@@ -44,11 +44,12 @@ export default function Post({ data }: PostQuery): ReactElement {
 
       <PostCardContainer>
         <PostCard>
-          {image && fluid && (
+          {image && gatsbyImageData && (
             <PostCardHeader>
               <PostCardCoverImage
                 alt={image?.name}
-                fluid={fluid as FluidObject}
+                image={gatsbyImageData as IGatsbyImageData}
+                objectFit="cover"
               />
             </PostCardHeader>
           )}
@@ -87,9 +88,7 @@ export const query = graphql`
                 cover_image {
                     name
                     childImageSharp {
-                        fluid(maxWidth: 1080, maxHeight: 400, fit: COVER) {
-                            ...GatsbyImageSharpFluid
-                        }
+                        gatsbyImageData(layout: FULL_WIDTH, aspectRatio: 2.5)
                     }
                 }
             }
