@@ -5,7 +5,7 @@ const kebabCase = require('lodash.kebabcase');
 exports.onCreateWebpackConfig = ({
   stage,
   actions,
-  getConfig,
+  getConfig
 }) => {
   if (stage === 'develop') {
     const config = getConfig();
@@ -17,21 +17,33 @@ exports.onCreateWebpackConfig = ({
   }
 };
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.onCreateNode = ({
+  node,
+  getNode,
+  actions
+}) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === 'MarkdownRemark') {
-    const slug = createFilePath({ node, getNode, basePath: 'pages' });
+    const slug = createFilePath({
+      node,
+      getNode,
+      basePath: 'pages'
+    });
 
     createNodeField({
       node,
       name: 'slug',
-      value: slug,
+      value: slug
     });
   }
 };
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
+exports.createPages = async ({
+  graphql,
+  actions,
+  reporter
+}) => {
   const { createPage } = actions;
   const result = await graphql(`
     query {
@@ -71,8 +83,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path: node.fields.slug,
       component: path.resolve('./src/templates/posts/index.tsx'),
       context: {
-        slug: node.fields.slug,
-      },
+        slug: node.fields.slug
+      }
     });
   });
 
@@ -82,8 +94,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path: `/tags/${kebabCase(tag.fieldValue)}/`,
       component: path.resolve('./src/templates/tags/index.tsx'),
       context: {
-        tag: tag.fieldValue,
-      },
+        tag: tag.fieldValue
+      }
     });
   });
 };
