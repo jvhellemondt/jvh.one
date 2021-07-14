@@ -25,6 +25,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: `${__dirname}/content/posts/`,
+        name: 'posts'
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         name: 'images',
         path: `${__dirname}/src/assets/images/`
       },
@@ -37,13 +44,6 @@ module.exports = {
         path: `${__dirname}/src/pages/`
       },
       __key: 'pages'
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/posts/`,
-        name: 'posts'
-      }
     },
     'gatsby-plugin-image',
     {
@@ -61,7 +61,13 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          'gatsby-remark-images',
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1080,
+              linkImagesToOriginal: false,
+            },
+          },
           'gatsby-remark-embedder',
           {
             resolve: 'gatsby-remark-prismjs',
@@ -106,7 +112,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/static/images/icon.png'
+        icon: 'src/assets/images/icon.png'
       }
     },
     {
