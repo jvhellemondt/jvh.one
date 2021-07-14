@@ -6,7 +6,7 @@ published: true
 tags: ['vue', 'vue2','attribute', 'props', 'inheritance', 'inheritAttrs', '$attrs']
 canonical_url: false 
 description: 'De optie inheritAttrs en de $attrs eigenschap. Hoe, wanneer en waarom gebruiken?'
-cover_image: './assets/images/crissy-jarvis-gdL-UZfnD3I-unsplash.jpg' 
+cover: './assets/images/crissy-jarvis-gdL-UZfnD3I-unsplash.jpg' 
 cover_credit: '© [Crissy Jarvis](https://unsplash.com/photos/gdL-UZfnD3I)'
 tweet: '1355859613896355841'
 ---

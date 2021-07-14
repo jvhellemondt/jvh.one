@@ -6,7 +6,7 @@ published: false
 tags: ['Javascript', 'Vue', 'Array', 'map']
 canonical_url: false 
 description: ''
-cover_image: '' 
+cover: '' 
 cover_credit: ''
 ---
 

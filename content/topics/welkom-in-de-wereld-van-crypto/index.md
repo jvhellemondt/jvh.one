@@ -5,7 +5,7 @@ published: false
 tags: ['crypto', 'bitcoin', 'Ethereum', 'blockchain', 'coinbase']
 canonical_url: false 
 description: ''
-cover_image: '' 
+cover: '' 
 cover_credit: ''
 ---
 

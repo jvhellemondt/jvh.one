@@ -5,7 +5,7 @@ published: false
 tags: ['Roadmap', 'TODO']
 canonical_url: false
 description: 'Een opsomming van de op dit moment geplande onderwerpen, waar ik over ga schrijven.'
-cover_image: './images/seljalandsfoss-iceland.jpeg'
+cover: './images/seljalandsfoss-iceland.jpeg'
 cover_credit: 'Omslag door Jens van Hellemondt -- @Seljalandsfoss IJsland'
 ---
 

@@ -27,7 +27,7 @@ export default function Post({ data }: PostQuery): ReactElement {
   const tags = post.frontmatter?.tags || [''];
   const twitter = post.frontmatter?.tweet;
   const published = post.frontmatter?.published || false;
-  const image = post.frontmatter?.cover_image;
+  const image = post.frontmatter?.cover;
   const gatsbyImageData = image?.childImageSharp?.gatsbyImageData;
 
   const [theme] = useTheme();
@@ -85,7 +85,7 @@ export const query = graphql`
                 published
                 tags
                 tweet
-                cover_image {
+                cover {
                     name
                     childImageSharp {
                         gatsbyImageData(layout: FULL_WIDTH, aspectRatio: 2.5)

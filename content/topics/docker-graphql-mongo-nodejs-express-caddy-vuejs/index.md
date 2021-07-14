@@ -23,7 +23,7 @@ tags:
   ]
 canonical_url: false
 description: 'Het opzetten van een backend en een frontend headless. Het kan op allerlei manieren. Met Docker containers en de Caddy webserver, zet je gemakkelijk een web applicatie op. GraphQL, MongoDB en Express. Combineer dit met VueJs en je webapp staat als een huis.'
-cover_image: '../elena-koycheva-GUYCM0jhuSA-unsplash.jpg'
+cover: '../elena-koycheva-GUYCM0jhuSA-unsplash.jpg'
 cover_credit: 'Elena Koycheva'
 ---
 

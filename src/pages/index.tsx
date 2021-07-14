@@ -29,7 +29,7 @@ export default function HomePage({ data }: { data: Query }): ReactElement {
         const timeToRead = post.timeToRead || 0;
         const published = post.frontmatter?.published || false;
         const description = post.frontmatter?.description || '';
-        const image = post.frontmatter?.cover_image;
+        const image = post.frontmatter?.cover;
         const gatsbyImageData = image?.childImageSharp?.gatsbyImageData;
         const slug = post.fields?.slug;
         return (
@@ -77,7 +77,7 @@ export const query = graphql`
                     cover_credit
                     date(fromNow: true, formatString: "LL", locale: "nl_NL")
                     description
-                    cover_image {
+                    cover {
                         name
                         childImageSharp {
                             gatsbyImageData(layout: FULL_WIDTH, aspectRatio: 2.5)

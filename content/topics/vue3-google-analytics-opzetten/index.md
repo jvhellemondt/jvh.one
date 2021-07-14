@@ -5,6 +5,6 @@ published: false
 tags: ['Vue', 'Vue3']
 canonical_url: false 
 description: ''
-cover_image: '' 
+cover: '' 
 cover_credit: ''
 ---
