@@ -8,7 +8,7 @@ canonical_url: false
 description: 'Componenten, je ontkomt er tegenwoordig niet meer aan. Alle grote Javascript-frameworks (Vue, Svelte, Ember, React,
 Angular etc..) hebben een vorm van componenten. Persoonlijk ben ik een fan van componenten. Het zorgt er bij mij voor
 dat ik eerder gebruikte code, niet nogmaals hoef te schrijven, of te kopiëren en te plakken.'
-cover: './elena-koycheva-GUYCM0jhuSA-unsplash.jpg'
+cover: './assets/elena-koycheva-GUYCM0jhuSA-unsplash.jpg'
 cover_credit: '© [Elena Koycheva](https://unsplash.com/@lenneek)'
 tweet: '1374091858620649475'
 ---

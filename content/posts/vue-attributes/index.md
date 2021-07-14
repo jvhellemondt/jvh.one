@@ -6,7 +6,7 @@ published: true
 tags: ['Vue', 'Vue2', 'attribute', 'props', 'inheritance']
 canonical_url: false 
 description: 'Attributes lijken verdacht veel op props. Alleen is het eigenlijk andersom. Een prop is een attribute! En het zijn de bouwstenen die onze componenten herbruikbaar maken en ze zijn cruciaal voor de vorming van componenten.' 
-cover: './dan-burton-l6jWD4AZIf0-unsplash.jpg' 
+cover: './assets/dan-burton-l6jWD4AZIf0-unsplash.jpg' 
 cover_credit: '© [Dan Burton](https://unsplash.com/@single_lens_reflex)'
 tweet: '1356575555576094720'
 ---
@@ -31,7 +31,7 @@ bruikbaar te maken (`<a href="https://www.jvh.one">Ga naar jvh.one!</a>`).
 Een ander voorbeeld is het image-element (`<img>`). Een image-element heeft twee vereiste attributen, namelijk `src` (
 de "locatie" van de afbeelding) en `alt` (een tekst die weergegeven wordt wanneer de afbeelding niet geladen kan worden)
 . De omslag foto's van deze blog maakt gebruik van het image-element, en dat ziet er (*ongeveer*) als volgt
-uit: `<img alt="Cover image" src="/assets/static/content/posts/vue-attributes/dan-burton-l6jWD4AZIf0-unsplash.jpg">`
+uit: `<img alt="Cover image" src="/assets/static/content/posts/vue-attributes/assets/dan-burton-l6jWD4AZIf0-unsplash.jpg">`
 .
 
 ## Attributen in Vue
