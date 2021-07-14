@@ -99,3 +99,46 @@ exports.createPages = async ({
     });
   });
 };
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = [`
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter
+    }
+  `,
+  `
+    type Frontmatter {
+      cover: File @link(by: "relativePath")
+    }
+  `];
+  createTypes(typeDefs);
+};
+
+// exports.createSchemaCustomization = ({ actions, schema }) => {
+//   const { createTypes } = actions;
+//   const typeDefs = [`
+//       type MarkdownRemark implements Node {
+//         frontmatter: Frontmatter
+//       }
+//     `,
+//   schema.buildObjectType({
+//     name: 'Frontmatter',
+//     fields: {
+//       image: {
+//         type: 'String',
+//         resolve: (source, args, context, info) => {
+//           console.log({ context });
+//           console.log({ source });
+//           console.log({ args });
+//           return source.cover;
+//           // context.nodeModel
+//           //   .getAllNodes({ type: "AuthorJson" })
+//           //   .find(author => author.email === source.author)
+//         },
+//       },
+//     },
+//   }),
+//   ];
+//   createTypes(typeDefs);
+// };
