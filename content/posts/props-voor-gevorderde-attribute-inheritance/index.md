@@ -6,7 +6,7 @@ published: true
 tags: ['vue', 'vue2','attribute', 'props', 'inheritance', 'inheritAttrs', '$attrs']
 canonical_url: false 
 description: 'De optie inheritAttrs en de $attrs eigenschap. Hoe, wanneer en waarom gebruiken?'
-cover: './assets/images/crissy-jarvis-gdL-UZfnD3I-unsplash.jpg' 
+cover: './assets/crissy-jarvis-gdL-UZfnD3I-unsplash.jpg' 
 cover_credit: '© [Crissy Jarvis](https://unsplash.com/photos/gdL-UZfnD3I)'
 tweet: '1355859613896355841'
 ---
@@ -237,7 +237,7 @@ export default {
 Wanneer er bij JTextField de waarde "Voornaam" als label (prop) wordt ingegeven en bij placeholder "Vul hier uw naam
 in" (`<JTextField label="Voornaam" placeholder="Vul hier uw voornaam in" />`), toont de console het volgende:
 
-![log $props en $attrs](./assets/images/$props_and_$attrs.png)
+![log $props en $attrs](./assets/$props_and_$attrs.png)
 
 Je ziet dat `placeholder` onder `$attrs` valt (*non-prop*), en dat `label` en `value` onder $props vallen.
 
