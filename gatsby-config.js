@@ -22,6 +22,29 @@ module.exports = {
     }
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/posts/`,
+        name: 'posts'
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/assets/images/`
+      },
+      __key: 'images'
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/src/pages/`
+      },
+      __key: 'pages'
+    },
     'gatsby-plugin-image',
     {
       resolve: 'gatsby-plugin-sharp',
@@ -34,29 +57,6 @@ module.exports = {
       }
     },
     'gatsby-transformer-sharp',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: `${__dirname}/src/assets/images/`
-      },
-      __key: 'images'
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/posts/`,
-        name: 'posts'
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'pages',
-        path: `${__dirname}/src/pages/`
-      },
-      __key: 'pages'
-    },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
