@@ -22,6 +22,18 @@ module.exports = {
     }
   },
   plugins: [
+    'gatsby-plugin-image',
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        defaults: {
+          formats: ['auto', 'webp'],
+          placeholder: 'dominantColor',
+          quality: 10
+        }
+      }
+    },
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -45,18 +57,6 @@ module.exports = {
       },
       __key: 'pages'
     },
-    'gatsby-plugin-image',
-    {
-      resolve: 'gatsby-plugin-sharp',
-      options: {
-        defaults: {
-          formats: ['auto', 'webp'],
-          placeholder: 'dominantColor',
-          quality: 10
-        }
-      }
-    },
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
