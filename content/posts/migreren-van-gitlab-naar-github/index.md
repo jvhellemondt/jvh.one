@@ -42,15 +42,15 @@ Het volgende staat eigenlijk letterlijk als stap bij de reeds aangemaakte reposi
 Wanneer Git beschikbaar is op het systeem, ga dan naar de terminal van jouw systeem.
 * Als je Windows hebt, heb je Powershell nodig. Je kan hiernaar zoeken via Start.
   
-<img src="./assets/powershell.png" width="100">
+<img src="./assets/powershell.png" >
 
 * Voor Mac, open Finder en zoek op "Terminal".
 
-<img src="./assets/terminal-mac.png" width="150" >
+<img src="./assets/terminal-mac.png" >
 
 * Mocht je een linux systeem gebruiken, dan ga ik ervan uit dat je leeft in Terminal. Zo niet, zoek naar terminal in jouw toepassingen venster.
 
-<img src="./assets/GNOME-terminal-icon.png" width="100" >
+<img src="./assets/GNOME-terminal-icon.png" >
 
 Ga (in powershell of terminal) naar werkmap waarin jouw applicatie staat en voer de volgende commando's uit:
 
