@@ -100,20 +100,20 @@ exports.createPages = async ({
   });
 };
 
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions;
-  const typeDefs = [`
-    type MarkdownRemark implements Node {
-      frontmatter: Frontmatter
-    }
-  `,
-  `
-    type Frontmatter {
-      cover: File @link(by: "relativePath")
-    }
-  `];
-  createTypes(typeDefs);
-};
+// exports.createSchemaCustomization = ({ actions }) => {
+//   const { createTypes } = actions;
+//   const typeDefs = [`
+//     type MarkdownRemark implements Node {
+//       frontmatter: Frontmatter
+//     }
+//   `,
+//   `
+//     type Frontmatter {
+//       cover: File @link(by: "relativePath")
+//     }
+//   `];
+//   createTypes(typeDefs);
+// };
 
 // exports.createSchemaCustomization = ({ actions, schema }) => {
 //   const { createTypes } = actions;
