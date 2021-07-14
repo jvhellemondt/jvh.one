@@ -6,7 +6,7 @@ published: true
 tags: ['git', 'github', 'gitlab', 'vcs', 'repository', 'versie beheer']
 canonical_url: false 
 description: 'Het lijkt een flinke taak, van GitLab, heel je repository overzetten naar GitHub..'
-cover: './assets/barth-bailey-d2uHXWTkGn4-unsplash.jpg'
+cover: './barth-bailey-d2uHXWTkGn4-unsplash.jpg'
 cover_credit: '© [Barth Bailey](https://unsplash.com/@7bbbailey)'
 tweet: '1356636404403601409'
 ---
@@ -23,15 +23,15 @@ Ga naar [GitHub.com](https://www.github.com) en zorg dat je aangemeld bent.
 
 Klik vervolgens op "Your repositories", in het menu rechtsboven (dit menu moet je open klikken door op jouw avatar te klikken).
 
-![GitHub-navigatie-menu](./assets/GitHub-nav-menu.png)
+![GitHub-navigatie-menu](GitHub-nav-menu.png)
 
 Op de volgende pagina, zie de knop "New". Door hier op te klikken, zal het formulier verschijnen waarmee je een GitHub repository kan aanmaken.
 
-![GitHub-nieuwe-repository](./assets/GitHub-new-repository.png)
+![GitHub-nieuwe-repository](GitHub-new-repository.png)
 
 Ik laat alle instellingen vaak staan zoals ze zijn, het enige wat ik invul, is de repository naam. Let op, wanneer je een vinkje aanzet bij een combobox onder de kop "Initialize this repository with"
 
-![GitHub-settings-initialize](./assets/GitHub-settings-initialize.png)
+![GitHub-settings-initialize](GitHub-settings-initialize.png)
 
 De repository is nu aangemaakt.
 
@@ -42,15 +42,15 @@ Het volgende staat eigenlijk letterlijk als stap bij de reeds aangemaakte reposi
 Wanneer Git beschikbaar is op het systeem, ga dan naar de terminal van jouw systeem.
 * Als je Windows hebt, heb je Powershell nodig. Je kan hiernaar zoeken via Start.
   
-<img src="./assets/powershell.png" width="100">
+<img src="./powershell.png" width="100">
 
 * Voor Mac, open Finder en zoek op "Terminal".
 
-<img src="./assets/terminal-mac.png" width="150" >
+<img src="./terminal-mac.png" width="100" >
 
 * Mocht je een linux systeem gebruiken, dan ga ik ervan uit dat je leeft in Terminal. Zo niet, zoek naar terminal in jouw toepassingen venster.
 
-<img src="./assets/GNOME-terminal-icon.png" width="100" >
+<img src="./GNOME-terminal-icon.png" width="100" >
 
 Ga (in powershell of terminal) naar werkmap waarin jouw applicatie staat en voer de volgende commando's uit:
 
