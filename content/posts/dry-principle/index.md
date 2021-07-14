@@ -6,7 +6,6 @@ published: false
 tags: ['Vue', 'Vue2']
 canonical_url: false 
 description: ''
-cover: '../elena-koycheva-GUYCM0jhuSA-unsplash.jpg'
 cover_credit: 'Elena Koycheva'
 ---
 
